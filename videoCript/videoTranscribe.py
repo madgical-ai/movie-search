@@ -9,13 +9,16 @@ load_dotenv()
 VIDEO_CRYPT_ACCESS_KEY = os.getenv("VIDEO_CRYPT_ACCESS_KEY")
 VIDEO_CRYPT_SECRET_KEY = os.getenv("VIDEO_CRYPT_SECRET_KEY")
 
-def generate_transcribe_file(access_key, secret_key, video_data):
+# def generate_transcribe_file(access_key, secret_key, video_data):
+def generate_transcribe_file():
     # Set the service URL
-    generateTranscribe = "https://api.videocrypt.com/generateTranscribe"
+    # generateTranscribe = "https://api.videocrypt.com/generateTranscribe"
+    generateTranscribe = "https://api.videocrypt.com/GenerateTranscript"
 
     # Set the input parameters
     input_params = {
-        "video_id": video_data["token"],  # Assuming "token" is used for video ID
+        # "video_id": video_data["token"],  # Assuming "token" is used for video ID
+        "video_id": "3877970_0_1783844973671850",  # test-01 video Assuming "token" is used for video ID
         "lang_setting": "3",
         "lang_option": ["en-IN", "en-US", "hi-IN"]
         # "lang_setting": "1",
@@ -24,8 +27,8 @@ def generate_transcribe_file(access_key, secret_key, video_data):
 
     # Set the header parameters
     headers = {
-        "accessKey": base64.b64encode(access_key.encode()).decode(),
-        "secretKey": base64.b64encode(secret_key.encode()).decode()
+        "accessKey": base64.b64encode(VIDEO_CRYPT_ACCESS_KEY.encode()).decode(),
+        "secretKey": base64.b64encode(VIDEO_CRYPT_SECRET_KEY.encode()).decode()
     }
 
     # Make the POST request
@@ -36,13 +39,6 @@ def generate_transcribe_file(access_key, secret_key, video_data):
 
     # Parse the JSON response
     result = response.json()
-
-     # Parse the JSON response
-    # try:
-    #     result = response.json()
-    # except requests.exceptions.JSONDecodeError as e:
-    #     print(f"Error decoding JSON response: {e}")
-    #     return
 
     # Check if the request was successful
     if result.get("status"):
@@ -55,3 +51,6 @@ def generate_transcribe_file(access_key, secret_key, video_data):
         print(f"Error: {result['message']}")
         if result.get("error"):
             print(f"Details: {result['error']}")
+
+
+generate_transcribe_file()

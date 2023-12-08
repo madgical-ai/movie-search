@@ -22,18 +22,18 @@ def get_video_details(access_key, secret_key, video_data):
 
     # Set the header parameters
     headers = {
-        "accessKey": base64.b64encode(access_key.encode()).decode(),
-        "secretKey": base64.b64encode(secret_key.encode()).decode()
+        "accessKey": base64.b64encode(VIDEO_CRYPT_ACCESS_KEY.encode()).decode(),
+        "secretKey": base64.b64encode(VIDEO_CRYPT_SECRET_KEY.encode()).decode()
     }
 
     # Make the POST request
     response = requests.post(getVideoDetails, json=input_params, headers=headers)
-    print("\n ---------------Video Details Response--------------------")
-    print(response)
-    print("---------------Video Details Response--------------------\n")
 
     # Parse the JSON response
     result = response.json()
-    # pprint.pprint(result)
+    print("\n ---------------Video Details Response--------------------")
+    print(response)
+    pprint.pprint(result)
+    print("---------------Video Details Response--------------------\n")
     return result
 

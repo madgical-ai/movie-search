@@ -39,12 +39,12 @@ def get_video_list(access_key, secret_key, device_type):
 
     if result.get("status"):
         for video in result["data"]["video_list"]:
-            print("\n-------Videos Details ---------\n")
+            print("\n-------Videos List ---------\n")
             print(video)
             # create_video_thumbnails(VIDEO_CRYPT_ACCESS_KEY, VIDEO_CRYPT_SECRET_KEY, video)
             # generate_transcribe_file(VIDEO_CRYPT_ACCESS_KEY, VIDEO_CRYPT_ACCESS_KEY, video)
             # get_transcribe_list(VIDEO_CRYPT_ACCESS_KEY, VIDEO_CRYPT_ACCESS_KEY, video)
-            # get_video_details(VIDEO_CRYPT_ACCESS_KEY, VIDEO_CRYPT_ACCESS_KEY, video)
+            get_video_details(VIDEO_CRYPT_ACCESS_KEY, VIDEO_CRYPT_ACCESS_KEY, video)
 
     # print(response)
 

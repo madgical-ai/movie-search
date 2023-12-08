@@ -61,3 +61,11 @@ pip3 install -r requirements.txt
     ```
     python3 app.py
     ```
+- For generating thumbnails/images (1 image per second) then you need to use the following command:
+    ```
+    python3 generateVideoThumbnails.py
+    ```
+- For generating array of dictionary for pushing it in weaviate then you need to use the following command:
+    ```
+    python3 getVideoThumbnails.py
+    ```

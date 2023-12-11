@@ -1,0 +1,1070 @@
+{
+    "deprecations": [],
+    "objects": [
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302749413,
+            "id": "00e1e7f8-0372-475f-a6a0-0a86d336ad6c",
+            "lastUpdateTimeUnix": 1702302749413,
+            "properties": {
+                "end_time": "00:10:23.690",
+                "original_url": "",
+                "start_time": "00:07:37.110",
+                "start_time_in_seconds": 625.62,
+                "text": "कैसे बैठेगा टेबल पे तू है ना। पैसे निकला ना। तो कर ले नकली है। दिखता है। out to get kid. हाँ जी लिखिए। आज तो तेरी हाॅल हाँ",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302763433,
+            "id": "02842c98-640d-4396-865a-89503f5ddabb",
+            "lastUpdateTimeUnix": 1702302763433,
+            "properties": {
+                "end_time": "00:31:09.780",
+                "original_url": "",
+                "start_time": "00:30:49.729",
+                "start_time_in_seconds": 1871.979,
+                "text": "I wanted to tell you over the phone. But सोचा कि तुम नहीं आओगे। how are you, Shiv? I'm good. You're a terrible liar.",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302760192,
+            "id": "0e59fd1c-94f4-47c1-bd15-824d27bd0245",
+            "lastUpdateTimeUnix": 1702302760192,
+            "properties": {
+                "end_time": "00:27:49.540",
+                "original_url": "",
+                "start_time": "00:27:35.020",
+                "start_time_in_seconds": 1669.839,
+                "text": "I said forget all that. I'm leaving for the US for my masters. I want to see you before I gosh, we're having a small get together this Saturday.",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302752786,
+            "id": "1078c916-fe42-4302-a86c-9a5369473f21",
+            "lastUpdateTimeUnix": 1702302752786,
+            "properties": {
+                "end_time": "00:17:37.650",
+                "original_url": "",
+                "start_time": "00:15:09.590",
+                "start_time_in_seconds": 1057.839,
+                "text": "विक्रम लोहिया को इस मर्जर के फेवर में रिपोर्ट करना होगा। at any cost. ऍम हाँ, गुलाम भाई कपूर हाँ भाई बोलना। Me right. Bye bye. I'm gonna go sp",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302760192,
+            "id": "14ed545f-5824-4784-8fb0-64de3c95ba4b",
+            "lastUpdateTimeUnix": 1702302760192,
+            "properties": {
+                "end_time": "00:28:29.880",
+                "original_url": "",
+                "start_time": "00:27:49.839",
+                "start_time_in_seconds": 1710.689,
+                "text": "You have to be there. Chef. I'm not asking for much. The mor you know, shit should have save, bro. -- So good to see\n-- you, man.",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302760192,
+            "id": "1f0b1688-cd01-4703-b1f1-83c7a8e8f43d",
+            "lastUpdateTimeUnix": 1702302760192,
+            "properties": {
+                "end_time": "00:29:03.520",
+                "original_url": "",
+                "start_time": "00:28:30.689",
+                "start_time_in_seconds": 1751.24,
+                "text": "How long it's been come -- guys. Look who's\n-- here? Cool. Go. Now many of those are seen. I say that I put them in things. OK? Very pass.",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302749413,
+            "id": "2560dd2c-964c-4099-a26c-9b1aa3653875",
+            "lastUpdateTimeUnix": 1702302749413,
+            "properties": {
+                "end_time": "00:01:42.250",
+                "original_url": "",
+                "start_time": "00:00:38.259",
+                "start_time_in_seconds": 102.58,
+                "text": "OK. To the ghost of mama life. Maritima Nephila. Cheers. Cheers. हाँ -- क्या पता ऐसा\n-- कुछ हो ही नहीं। क्या पता किसी पागल साइंटिस्ट ने",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302749413,
+            "id": "25c81d4d-3ad7-4e4b-b1e0-96d42d3b9b57",
+            "lastUpdateTimeUnix": 1702302749413,
+            "properties": {
+                "end_time": "00:04:36.310",
+                "original_url": "",
+                "start_time": "00:02:21.669",
+                "start_time_in_seconds": 276.64,
+                "text": "however, if it does exist but all we could change. Go on. Yeah, kind of. She is the last day. Hello, ऍम बोल रही हूँ। ॅ है",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302749412,
+            "id": "2a0843d1-db95-41c4-beb1-f068d8bd4267",
+            "lastUpdateTimeUnix": 1702302749412,
+            "properties": {
+                "end_time": "00:02:06.360",
+                "original_url": "",
+                "start_time": "00:01:57.129",
+                "start_time_in_seconds": 126.54,
+                "text": "don't you think modern science would have found out about it by now? Come on. तो तुम्हें एक बात बताओ। What is that? I E Q. Good question.",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302763434,
+            "id": "31aefb25-1e43-4c3e-bbc6-05657d786258",
+            "lastUpdateTimeUnix": 1702302763434,
+            "properties": {
+                "end_time": "00:29:57.380",
+                "original_url": "",
+                "start_time": "00:29:26.410",
+                "start_time_in_seconds": 1797.7,
+                "text": "नाॅक तुझे मिला होता तो फ्री में दारू पीते थे। अरे यार संजू बाइक वे चिंटू ऍम कॅश होता है। ऍम one vertical. The beard is beard. Nice. नहीं",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302752786,
+            "id": "3221e003-b880-4265-a2b0-c8f7fa5b350c",
+            "lastUpdateTimeUnix": 1702302752786,
+            "properties": {
+                "end_time": "00:18:19.670",
+                "original_url": "",
+                "start_time": "00:18:05.800",
+                "start_time_in_seconds": 1103.2,
+                "text": "बोल रहा था। सात दिन में लोटा दूँगा। सात दिन हो गया। -- बाईस बार थोडा\n-- लेट हो गया। दो दिन में माल उतरेगा। और देर हो जाएगा। मुंडा",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302763433,
+            "id": "3525f6ec-1d9d-4cb9-8c67-8e4a9e5ce297",
+            "lastUpdateTimeUnix": 1702302763433,
+            "properties": {
+                "end_time": "00:31:30.750",
+                "original_url": "",
+                "start_time": "00:31:11.979",
+                "start_time_in_seconds": 1894.53,
+                "text": "What do you want me to say? Neha life moves on. Life moves. You moved on Shiv. Don't Chaka emoji Chor, you left me. I still waited for you, ok?",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302756619,
+            "id": "37a70807-5365-4249-af5b-c8ad14ee62e6",
+            "lastUpdateTimeUnix": 1702302756619,
+            "properties": {
+                "end_time": "00:21:53.420",
+                "original_url": "",
+                "start_time": "00:21:46.760",
+                "start_time_in_seconds": 1313.64,
+                "text": "दो हफ्ते से स्टोरी चल रही है तो मैंने सोचा कि कुछ कुछ अलग किया जाए तो इसमें क्रीएटिव I feel like",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302756619,
+            "id": "3c7e011e-fcf6-4ec9-8923-2a93721c6e20",
+            "lastUpdateTimeUnix": 1702302756619,
+            "properties": {
+                "end_time": "00:25:00.960",
+                "original_url": "",
+                "start_time": "00:24:22.780",
+                "start_time_in_seconds": 1505.47,
+                "text": "कुछ लाना नहीं। मैंने सब कुछ ले लिया। तुम बस टाइम पे आॅडी ले मत करना और घर आने से पहले स्मोक मत करना। ओके ऍम शिव माथुर हाँ",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302763433,
+            "id": "4427e61a-1ee6-4c37-a0ef-ff8aac6d8901",
+            "lastUpdateTimeUnix": 1702302763433,
+            "properties": {
+                "end_time": "00:31:40.239",
+                "original_url": "",
+                "start_time": "00:31:34.530",
+                "start_time_in_seconds": 1901.089,
+                "text": "You just disappeared without giving a fuck about what would happen to me? The Marisa Hua.",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302760192,
+            "id": "4ac53f86-03e1-430b-aa18-4523879e58d2",
+            "lastUpdateTimeUnix": 1702302760192,
+            "properties": {
+                "end_time": "00:26:30.980",
+                "original_url": "",
+                "start_time": "00:26:02.619",
+                "start_time_in_seconds": 1591.86,
+                "text": "Hello, Neha. Do go in. सिर्फ वाली भी वाली हमको क्या लेना",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302765868,
+            "id": "569a8585-d3a5-4f7b-8ace-f2953b5af92e",
+            "lastUpdateTimeUnix": 1702302765868,
+            "properties": {
+                "end_time": "00:34:05.064",
+                "original_url": "",
+                "start_time": "00:33:51.650",
+                "start_time_in_seconds": 2045.305,
+                "text": "Call an ambulance. What do you mean? Don't call the overdose case? Excuse me? Can you hear me? -- I'm\n-- calling the cops. No, I'm calling the cops desmond.",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302756619,
+            "id": "56b61778-dd30-49e2-8cd4-6289613638a7",
+            "lastUpdateTimeUnix": 1702302756619,
+            "properties": {
+                "end_time": "00:23:16.040",
+                "original_url": "",
+                "start_time": "00:23:03.349",
+                "start_time_in_seconds": 1396.25,
+                "text": "camera rolling and action एक रंगीन रात का बबल बात बन गया। कब मौत ऍम आइए देखते हैं आखिर क्या हुआ उस रात माया देवी के साथ",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302749413,
+            "id": "5db11f86-c6a9-45a3-976a-022911db193b",
+            "lastUpdateTimeUnix": 1702302749413,
+            "properties": {
+                "end_time": "00:01:48.640",
+                "original_url": "",
+                "start_time": "00:01:42.580",
+                "start_time_in_seconds": 109.25,
+                "text": "कुछ लिख दिया वो -- और\n-- हम उसे ढूँढ रहे हैं, हो सकता है ही है।",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302752786,
+            "id": "605a3500-da43-4ab1-a5e2-8c6319a4320d",
+            "lastUpdateTimeUnix": 1702302752786,
+            "properties": {
+                "end_time": "00:13:42.440",
+                "original_url": "",
+                "start_time": "00:13:32.859",
+                "start_time_in_seconds": 822.559,
+                "text": "-- We're really looking forward to working with\n-- you. Thank you so much. Thank you. Thank you. Thank you. Good day. Yeah, I think this, I was gonna be",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302749413,
+            "id": "68b632ba-44bd-45a2-905b-054e9a5f681b",
+            "lastUpdateTimeUnix": 1702302749413,
+            "properties": {
+                "end_time": "00:07:36.640",
+                "original_url": "",
+                "start_time": "00:07:16.130",
+                "start_time_in_seconds": 457.11,
+                "text": "मेरा बात हो गया ऍम क्यों ले रहे ऍम थोडा गर्म था करके। हो जायेगा हो जायेगा। क्या हालत बना के रखा है रे बेकार लगता है टोटल भिखारी",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302763434,
+            "id": "6a22d0af-1421-47c7-bc30-2b07d0b9ee55",
+            "lastUpdateTimeUnix": 1702302763434,
+            "properties": {
+                "end_time": "00:30:15.459",
+                "original_url": "",
+                "start_time": "00:29:57.700",
+                "start_time_in_seconds": 1816.54,
+                "text": "मैं क्या करूँ ये वाइन उनके So uh let's do a toast. A toast. Toast to Neal. Yeah, for a happy married life. -- Congratulations,\n-- babe. Cheers chain of",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302760192,
+            "id": "6fa903ed-17f6-4aae-afd2-ffa321cf059a",
+            "lastUpdateTimeUnix": 1702302760192,
+            "properties": {
+                "end_time": "00:26:42.200",
+                "original_url": "",
+                "start_time": "00:26:31.860",
+                "start_time_in_seconds": 1602.8,
+                "text": "चोरी का माल नहीं है। ना तो वजन के हिसाब से जो भी होता है, ईमानदारी से दे देगा। वैसे तो पंद्रह हजार होता है, लेकिन आपका रब मिले तो",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302763434,
+            "id": "7984202e-261c-4ae4-9291-7f89c1e0e4e0",
+            "lastUpdateTimeUnix": 1702302763434,
+            "properties": {
+                "end_time": "00:30:49.069",
+                "original_url": "",
+                "start_time": "00:30:16.540",
+                "start_time_in_seconds": 1849.729,
+                "text": "nothing. Actually they have their in house brewery and fresh beer is always better. This is what I got with a micro. Hey, congratulations.",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302760192,
+            "id": "85d45dd2-83d5-4dcf-bc42-f84be98e90b9",
+            "lastUpdateTimeUnix": 1702302760192,
+            "properties": {
+                "end_time": "00:25:59.369",
+                "original_url": "",
+                "start_time": "00:25:39.189",
+                "start_time_in_seconds": 1562.619,
+                "text": "bro? Should I drop you somewhere? I'm good man. I'm good. -- Hello?\n-- Naha. Guess who I met today? Who? Shiv Neha? Shiv, who? Chief Mathur Neha. Chief Maor.",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302756619,
+            "id": "86261b63-a27f-400e-87ef-682773c36f5a",
+            "lastUpdateTimeUnix": 1702302756619,
+            "properties": {
+                "end_time": "00:25:26.790",
+                "original_url": "",
+                "start_time": "00:25:05.470",
+                "start_time_in_seconds": 1529.369,
+                "text": "है किधर तू कांडू किधर गायब हो गया है तो? It was so good to see you, man. It's been so long. We all still made all of us. ऍम",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302760192,
+            "id": "89ba1332-1bf8-499d-88ac-c477a4002697",
+            "lastUpdateTimeUnix": 1702302760192,
+            "properties": {
+                "end_time": "00:27:03.890",
+                "original_url": "",
+                "start_time": "00:26:42.800",
+                "start_time_in_seconds": 1624.72,
+                "text": "सत्रह से ज्यादा किसी हिसाब में नहीं बैठेगा। भाई नाराज मत हुई थी। किधर इधर आओ मोटा बात करते हैं। पूरा बीस बीस में फाइनल करते हैं।",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302765868,
+            "id": "8a29c1f6-0af0-45c7-8c01-050f31ad1b50",
+            "lastUpdateTimeUnix": 1702302765868,
+            "properties": {
+                "end_time": "00:33:46.599",
+                "original_url": "",
+                "start_time": "00:33:23.189",
+                "start_time_in_seconds": 2031.65,
+                "text": "Uh Yeah, I'm fine. I just have this is what's what the fuck shit. Oh -- my\n-- God, Shiv, somebody called an ambulance just check if he's breathing.",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302765868,
+            "id": "9679c7cc-2cc9-47c0-8d1d-f9d8e4a7bc11",
+            "lastUpdateTimeUnix": 1702302765868,
+            "properties": {
+                "end_time": "00:32:52.610",
+                "original_url": "",
+                "start_time": "00:32:44.199",
+                "start_time_in_seconds": 1974.13,
+                "text": "-- Why are you\n-- wasting your time with such an asshole? तुम जाओ यार, तुम जाओ तुम जाओ जा के शादी वादी कर लो, बच्चे अच्छे पैदा कर लो।",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302760192,
+            "id": "9e2db08f-35cc-4e3f-9de9-3b55d3b33ad2",
+            "lastUpdateTimeUnix": 1702302760192,
+            "properties": {
+                "end_time": "00:29:26.020",
+                "original_url": "",
+                "start_time": "00:29:11.240",
+                "start_time_in_seconds": 1766.41,
+                "text": "फॅस। हमारा रीपीट कर दीजिए। But wine for -- because you know she's so much more fashionable\n-- than us. Now, Arjun, -- you\n-- guys invested in that फाइन",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302752786,
+            "id": "9fc0a097-69cc-43d5-b938-ed2ae406f6f0",
+            "lastUpdateTimeUnix": 1702302752786,
+            "properties": {
+                "end_time": "00:10:58.570",
+                "original_url": "",
+                "start_time": "00:10:25.620",
+                "start_time_in_seconds": 659.35,
+                "text": "तुम्हें डाल कौन है? राक्षी -- वेस्ट ऍम\n-- कुछ किधर है तुम इतने दिन से? मालूम है ना तीन महीने का पेमेंट पेंडिंग है। ऍम फाइन लगेगा। ऍम",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302756619,
+            "id": "a4995309-f0e2-4ce2-9974-c943193d24c3",
+            "lastUpdateTimeUnix": 1702302756619,
+            "properties": {
+                "end_time": "00:23:02.320",
+                "original_url": "",
+                "start_time": "00:22:42.189",
+                "start_time_in_seconds": 1383.349,
+                "text": "camera rolling, ऍम एक रंगीन रात का बाॅल बन गया। कब मौत ऍम आइए देखते हैं आखिर क्या हुआ उस रात माया देवी के साथ वाॅकर हाँ",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302760192,
+            "id": "a98b47d2-ed10-45f8-b87b-a523e6829e6f",
+            "lastUpdateTimeUnix": 1702302760192,
+            "properties": {
+                "end_time": "00:27:32.410",
+                "original_url": "",
+                "start_time": "00:27:04.720",
+                "start_time_in_seconds": 1655.02,
+                "text": "आपके लेके हमारे लिए घाटे का सौदा है फिर भी आप Hello. Hi. She I tried getting in touch with you so many times but कैसे हो तुम? I",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302749413,
+            "id": "ae7996da-df8d-486f-a2b6-0b158ba91439",
+            "lastUpdateTimeUnix": 1702302749413,
+            "properties": {
+                "end_time": "00:01:57.120",
+                "original_url": "",
+                "start_time": "00:01:49.250",
+                "start_time_in_seconds": 117.12899999999999,
+                "text": "Let's admit this. There's no such thing as a magical herb. Think about it. It's 1970 guys. If this plant was so revolutionary,",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302763434,
+            "id": "afb96603-964b-4fba-ad78-9e7276b54932",
+            "lastUpdateTimeUnix": 1702302763434,
+            "properties": {
+                "end_time": "00:32:20.030",
+                "original_url": "",
+                "start_time": "00:32:13.569",
+                "start_time_in_seconds": 1943.1,
+                "text": "You can work with him, start a fresh, he also has a spare apartment in bed road so you can come back to town and",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302752786,
+            "id": "b0c00075-6d47-43e3-b8ef-97166a299c10",
+            "lastUpdateTimeUnix": 1702302752786,
+            "properties": {
+                "end_time": "00:11:51.100",
+                "original_url": "",
+                "start_time": "00:10:59.350",
+                "start_time_in_seconds": 812.859,
+                "text": "किधर जाता है। विजिटिंग टाइम है कल आना। क्या? जाने के बाद तुम सोई नहीं, नींद कहाँ आती है। बहुत",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302760192,
+            "id": "b853cdb1-218e-4d7f-b089-4acf2587663f",
+            "lastUpdateTimeUnix": 1702302760192,
+            "properties": {
+                "end_time": "00:25:38.599",
+                "original_url": "",
+                "start_time": "00:25:29.369",
+                "start_time_in_seconds": 1539.189,
+                "text": "-- I can't believe\n-- this. Ok? I have your number now. I'm gonna call you. OK? Can you come and see us,",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302756619,
+            "id": "b8bbd50b-1af9-44d2-a1be-6ca42c0f0602",
+            "lastUpdateTimeUnix": 1702302756619,
+            "properties": {
+                "end_time": "00:22:41.810",
+                "original_url": "",
+                "start_time": "00:21:53.640",
+                "start_time_in_seconds": 1362.189,
+                "text": "we all feel विश्व ली बहुत ड्राॅ। इसको एक टाइटल भी दिया मौत ऍम बॉस बॉस को बोलो धंधे पे ध्यान दो क्रिएटिविटी। ॅ फॅर हाँ ऍम ऍम ऍम sounds",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302756619,
+            "id": "b98d2d34-da73-48db-a6a6-6bfb2ae0d396",
+            "lastUpdateTimeUnix": 1702302756619,
+            "properties": {
+                "end_time": "00:23:39.950",
+                "original_url": "",
+                "start_time": "00:23:27.260",
+                "start_time_in_seconds": 1437.739,
+                "text": "David. This is the last take. OK. Just roll now, sound camera and action. एक रंगीन रात का बबल बात",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302765868,
+            "id": "c252f092-c4a7-49db-9a18-22a513206284",
+            "lastUpdateTimeUnix": 1702302765868,
+            "properties": {
+                "end_time": "00:33:22.170",
+                "original_url": "",
+                "start_time": "00:32:54.130",
+                "start_time_in_seconds": 2003.189,
+                "text": "That's all you're fucking capable of anyway. You know what I shouldn't have called you so harsh, harsher. Look at his eyes. Exactly what the fuck out. ओके",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302752786,
+            "id": "c7e1d37a-b26b-4b94-880d-de4734f2ae01",
+            "lastUpdateTimeUnix": 1702302752786,
+            "properties": {
+                "end_time": "00:18:36.260",
+                "original_url": "",
+                "start_time": "00:18:23.200",
+                "start_time_in_seconds": 1118.87,
+                "text": "माल आएगा, फिर तो बेचेगा फिर मेरे पैसे लौटाएगा। नंदे में बहुत मेहनत है मंगाना रंडी बाजी नशेबाजी तो दूर की बात है।",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302749413,
+            "id": "c9901eae-46ff-40ec-9b94-627742b756ab",
+            "lastUpdateTimeUnix": 1702302749413,
+            "properties": {
+                "end_time": "00:05:00.360",
+                "original_url": "",
+                "start_time": "00:04:36.640",
+                "start_time_in_seconds": 329.18,
+                "text": "जल्दी आप इसको क्लीन कीजिये। अरे इधर ऍम पे कॉल किया था आज रात का टाइम पे पहुँच हम मार के इधर उधर लुढक मत जाना टाइम पे पहुँच जाना।",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302752786,
+            "id": "ccd959f5-3289-46c2-997d-bcd6f3c78e72",
+            "lastUpdateTimeUnix": 1702302752786,
+            "properties": {
+                "end_time": "00:13:55.739",
+                "original_url": "",
+                "start_time": "00:13:42.559",
+                "start_time_in_seconds": 836.39,
+                "text": "weird. बाकी सब कंट्रोल में है। सिर्फ विक्रम लोहिया का प्रॉब्लम है। He won't agree. We have put every offer we have on the table. Um Man,",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302752786,
+            "id": "d6354efe-d868-42a6-a9fb-0c46cd919ab7",
+            "lastUpdateTimeUnix": 1702302752786,
+            "properties": {
+                "end_time": "00:20:15.490",
+                "original_url": "",
+                "start_time": "00:18:38.870",
+                "start_time_in_seconds": 1215.94,
+                "text": "मेरे पास तो खाना खाने का भी टाइम नहीं है। चल तो भाई एक हफ्ता उससे ज्यादा नहीं ऍम अच्छा मीटर देख के क्या फायदा? दिल नहीं भरेगा तो",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302749413,
+            "id": "d69bccff-1a35-42c9-a03a-2289dc218ce5",
+            "lastUpdateTimeUnix": 1702302749413,
+            "properties": {
+                "end_time": "00:02:19.860",
+                "original_url": "",
+                "start_time": "00:02:06.540",
+                "start_time_in_seconds": 141.669,
+                "text": "I want to see you guys fail miserably fall flat on your faces and have a good laugh. Well, अगर ऐसा कुछ है ही नहीं। at least we'll know that",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302763434,
+            "id": "d9d5fead-597c-4d83-8940-a55c8016452e",
+            "lastUpdateTimeUnix": 1702302763434,
+            "properties": {
+                "end_time": "00:32:35.229",
+                "original_url": "",
+                "start_time": "00:32:23.100",
+                "start_time_in_seconds": 1957.52,
+                "text": "चिंटू जैसे लोग मेरी मदद करेंगे। ok, Shiv don't take this in the wrong way, ok? I'm just trying to help. I don't need help ne I'm shit. Fucking ma",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302756619,
+            "id": "da4b4d14-de62-4dd3-a175-49ec2764fe74",
+            "lastUpdateTimeUnix": 1702302756619,
+            "properties": {
+                "end_time": "00:23:26.850",
+                "original_url": "",
+                "start_time": "00:23:16.250",
+                "start_time_in_seconds": 1407.26,
+                "text": "-- फॅमिली\n-- भेंज दिनभर ये आपके साथ खडे हो गया। मैं हाथ इधर डाल उधर डाल क्या चल रहा है कोई नहीं देखने वाला ये छुट्टियाँ ठीक है।",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302765868,
+            "id": "db3e72e0-eb15-4662-bffc-cdbd01b71dc8",
+            "lastUpdateTimeUnix": 1702302765868,
+            "properties": {
+                "end_time": "00:39:39.090",
+                "original_url": "",
+                "start_time": "00:34:05.305",
+                "start_time_in_seconds": 2378.699,
+                "text": "My name is Arjun. W my family owns the boat club down the road. मुझे पाल इसका झंझट नहीं चाहिए। Can you please help, please? No. ऍम ऍम ऍम Mhm.",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302752786,
+            "id": "e5a04380-7c72-42e8-a82e-2fb77299e10d",
+            "lastUpdateTimeUnix": 1702302752786,
+            "properties": {
+                "end_time": "00:15:08.690",
+                "original_url": "",
+                "start_time": "00:13:56.390",
+                "start_time_in_seconds": 909.59,
+                "text": "we tried our level best. Well, obviously your best is not good enough लगता। इसमें ये वजह बहुत इंपॉर्टेंट है। मेरे लिए",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302756619,
+            "id": "e927ab54-d37f-417a-b19d-142abc0f30f7",
+            "lastUpdateTimeUnix": 1702302756619,
+            "properties": {
+                "end_time": "00:21:46.250",
+                "original_url": "",
+                "start_time": "00:20:15.940",
+                "start_time_in_seconds": 1306.76,
+                "text": "लाइन तो काटेगा ना, अब ऑफिस जाना पडेगा दिल भरने। man. Schumer ready? Five minutes. OK. तो आज हम तीन स्टोरी कर रहे ऍम की स्टोरी ऍम",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302763433,
+            "id": "ec0f0c81-92c6-4a3f-b334-e2f729b46b87",
+            "lastUpdateTimeUnix": 1702302763433,
+            "properties": {
+                "end_time": "00:31:51.900",
+                "original_url": "",
+                "start_time": "00:31:41.089",
+                "start_time_in_seconds": 1912.03,
+                "text": "It was fuck all, ok? Nobody is denying that but I was there for you and you, तुम्हें अपनी ऍफ पीती के अलावा कुछ नहीं चाहिए था।",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302756619,
+            "id": "f1c9e2a7-015b-4f7c-9803-10f6dd94d072",
+            "lastUpdateTimeUnix": 1702302756619,
+            "properties": {
+                "end_time": "00:24:22.410",
+                "original_url": "",
+                "start_time": "00:23:57.739",
+                "start_time_in_seconds": 1462.78,
+                "text": "The person that you are trying to reach is our able to team. ऍम अच्छा, कल माँ की बरसी तुम मुँह पे कराना सारी -- मुझे लगा कोई\n-- और",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302765868,
+            "id": "f430ad9c-44f4-4e26-ac40-81e4d8807aa5",
+            "lastUpdateTimeUnix": 1702302765868,
+            "properties": {
+                "end_time": "00:32:44.189",
+                "original_url": "",
+                "start_time": "00:32:37.520",
+                "start_time_in_seconds": 1964.199,
+                "text": "तो मैं क्या लगता है? मुझे ऐसी छूट की मदद चाहिए। -- why\n-- are you behaving like such an asshole?",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302763434,
+            "id": "f48fb613-f153-4435-8e83-1135b479dda1",
+            "lastUpdateTimeUnix": 1702302763434,
+            "properties": {
+                "end_time": "00:32:12.920",
+                "original_url": "",
+                "start_time": "00:31:52.030",
+                "start_time_in_seconds": 1933.569,
+                "text": "I mean shit happens, Shiv, it's how you deal with it that matters and drugs is never the answer, ok? So you sorry look, I can speak with Chintu, ok?",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302752786,
+            "id": "fbbe46d9-e347-405f-a925-a41bcd84a7a1",
+            "lastUpdateTimeUnix": 1702302752786,
+            "properties": {
+                "end_time": "00:18:04.090",
+                "original_url": "",
+                "start_time": "00:17:37.839",
+                "start_time_in_seconds": 1085.8,
+                "text": "on it, यहाँ पे एक बावर्ची है, बढिया बनाता है। अरे पैसे गायब हो ना। -- माल उतरा नहीं अभी\n-- तक। नर्स खोखा लेकर गया तू",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        },
+        {
+            "class": "VideoCriptTextDataDot",
+            "creationTimeUnix": 1702302749413,
+            "id": "fe8e0e13-9eae-4a62-b34d-2b8eac9aec6e",
+            "lastUpdateTimeUnix": 1702302749413,
+            "properties": {
+                "end_time": "00:07:14.940",
+                "original_url": "",
+                "start_time": "00:05:29.180",
+                "start_time_in_seconds": 436.13,
+                "text": "-- कितनी बार बोला सुंदर\n-- के आकर लाइन डिस्टर्ब होता है। तू जायेगा रोज का इसका I चालू ना। हाँ तो चुपचाप चल अन्ना बुलाते।",
+                "title": "Sample MX Video - test",
+                "total_video_Duration": "00:40:32",
+                "video_download_url": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3881027/1702285474_6528324746215939/1702284947898_148583977353184160_video_VOD360p30.mp4",
+                "video_file_url_hls": "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8",
+                "video_id": "3881027_0_5504969059605334"
+            },
+            "vectorWeights": null
+        }
+    ],
+    "totalResults": 56
+}

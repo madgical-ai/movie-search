@@ -8,21 +8,22 @@ load_dotenv()
 
 VIDEO_CRYPT_ACCESS_KEY = os.getenv("VIDEO_CRYPT_ACCESS_KEY")
 VIDEO_CRYPT_SECRET_KEY = os.getenv("VIDEO_CRYPT_SECRET_KEY")
+VIDEO_CRIPT_GENERATE_TRANSCRIBE_FILE_URL = os.getenv("VIDEO_CRIPT_GENERATE_TRANSCRIBE_FILE_URL")
 
-# def generate_transcribe_file(access_key, secret_key, video_data):
-def generate_transcribe_file():
+
+
+def generate_transcribe_file(video_data):
+
     # Set the service URL
     # generateTranscribe = "https://api.videocrypt.com/generateTranscribe"
-    generateTranscribe = "https://api.videocrypt.com/GenerateTranscript"
+    # generateTranscribe = "https://api.videocrypt.com/GenerateTranscript"
 
     # Set the input parameters
     input_params = {
-        # "video_id": video_data["token"],  # Assuming "token" is used for video ID
-        "video_id": "3878240_0_7982816139926658",  # test-01 video Assuming "token" is used for video ID
+        "video_id": video_data["token"],  # Assuming "token" is used for video ID
+        # "video_id": "3878240_0_7982816139926658",  # test-01 video Assuming "token" is used for video ID
         "lang_setting": "3",
         "lang_option": ["en-IN", "en-US", "hi-IN"]
-        # "lang_setting": "1",
-        # "lang_option": ["en-IN"]
     }
 
     # Set the header parameters
@@ -32,7 +33,7 @@ def generate_transcribe_file():
     }
 
     # Make the POST request
-    response = requests.post(generateTranscribe, json=input_params, headers=headers)
+    response = requests.post(VIDEO_CRIPT_GENERATE_TRANSCRIBE_FILE_URL, json=input_params, headers=headers)
     print("\n ---------------Generate Transcribe Response--------------------")
     print(response)
     print("---------------Generate TranscribeResponse--------------------\n")
@@ -53,4 +54,4 @@ def generate_transcribe_file():
             print(f"Details: {result['error']}")
 
 
-generate_transcribe_file()
+# generate_transcribe_file()

@@ -8,7 +8,7 @@ load_dotenv()
 # from videoThumbnails import create_video_thumbnails
 # from videoTranscribe import generate_transcribe_file
 # from videoListTranscribe import get_transcribe_list
-from videoDetails import get_video_details
+from getVideoDetails import get_video_details
 
 VIDEO_CRYPT_ACCESS_KEY = os.getenv("VIDEO_CRYPT_ACCESS_KEY")
 VIDEO_CRYPT_SECRET_KEY = os.getenv("VIDEO_CRYPT_SECRET_KEY")
@@ -44,7 +44,7 @@ def get_video_list(access_key, secret_key, device_type):
             # create_video_thumbnails(VIDEO_CRYPT_ACCESS_KEY, VIDEO_CRYPT_SECRET_KEY, video)
             # generate_transcribe_file(VIDEO_CRYPT_ACCESS_KEY, VIDEO_CRYPT_ACCESS_KEY, video)
             # get_transcribe_list(VIDEO_CRYPT_ACCESS_KEY, VIDEO_CRYPT_ACCESS_KEY, video)
-            get_video_details(VIDEO_CRYPT_ACCESS_KEY, VIDEO_CRYPT_ACCESS_KEY, video)
+            # get_video_details(video)
 
     # print(response)
 

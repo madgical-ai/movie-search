@@ -7,8 +7,12 @@ from .textToVectors import convertTextToVectors
 load_dotenv()
 WEAVIATE_CLUSTER_URL = os.getenv("WEAVIATE_CLUSTER_URL")
 # WEAVIATE_CLASS_NAME = os.getenv("WEAVIATE_CLASS_NAME")
+VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME = os.getenv("VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME")
 
-def pushDataToWeaviate(data,weaviateClassName):
+
+jsonFolder = "output"
+os.makedirs(jsonFolder, exist_ok=True)
+def pushDataToWeaviate(data):
     
     # Your JSON data with a larger number of items
     print(len(data))
@@ -19,21 +23,31 @@ def pushDataToWeaviate(data,weaviateClassName):
     # client.schema.delete_all()
 
     # Define the class name and schema
-    client.schema.delete_class(weaviateClassName)
+    client.schema.delete_class(VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME)
 
     class_obj = {
-        "class": weaviateClassName,
+        "class": VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME,
         "vectorizer": "none",
         "moduleConfig": {}
     }
 
+
+    # class_obj = {
+    #     "class": VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME,
+    #     "vectorizer": "none",
+    #     "vectorIndexConfig": {
+    #     "distance": "dot",
+    # },
+    #     "moduleConfig": {}
+    # }
+
     # Create the class in Weaviate
     try:
         client.schema.create_class(class_obj)
-        print(f"Class '{weaviateClassName}' created successfully.")
+        print(f"Class '{VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME}' created successfully.")
     except weaviate.RequestError as e:
         if e.status_code == 409:
-            print(f"Class '{weaviateClassName}' already exists.")
+            print(f"Class '{VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME}' already exists.")
         else:
             print(f"Error creating class: {e}")
 
@@ -56,17 +70,21 @@ def pushDataToWeaviate(data,weaviateClassName):
                 try:
                     # print(f"Importing segment: {i + 1} in batch {batch_index + 1}")
                     properties = {
-                        "videoUrl": d["video_url"],
                         "title": d["title"],
-                        "author": [d["author"]],  # Fix author field
+                        "video_id": d["video_id"],
+                        "start_time": d["start_time"],
+                        "end_time": d["end_time"],
                         "text": d["text"],
-                        "start": d["start"],
-                        "duration": d["duration"],
+                        "start_time_in_seconds": d["start_time_in_seconds"],
+                        "total_video_Duration": d["total_video_Duration"],
+                        "video_file_url_hls": d["video_file_url_hls"],
+                        "video_download_url": d["video_download_url"],
+                        "original_url": d["original_url"],
                     }
                     vec = convertTextToVectors(d["text"])
                     batch.add_data_object(
                         data_object=properties,
-                        class_name=weaviateClassName,
+                        class_name=VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME,
                         # vector=embeddings[i].tolist()
                         vector=vec[0]
                     )
@@ -76,8 +94,8 @@ def pushDataToWeaviate(data,weaviateClassName):
 
     print("Data import completed.")
 
-    all_objects = client.data_object.get(class_name=weaviateClassName)
-    with open(f'outputJSON/{weaviateClassName}.json', 'w', encoding='utf-8') as json_file:
+    all_objects = client.data_object.get(class_name=VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME)
+    with open(f'{jsonFolder}/{VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME}-From-Weaviate.json', 'w', encoding='utf-8') as json_file:
         json.dump(all_objects, json_file, ensure_ascii=False, indent=4)
     
     return "done"    

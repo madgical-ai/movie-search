@@ -2,6 +2,7 @@ from sentence_transformers import SentenceTransformer, util
 from PIL import Image, ImageFile
 import os
 import torch
+import requests
 import torch.nn.functional as F
 from torch import Tensor
 # from src.textToVectors import convertTextToVectors
@@ -10,8 +11,14 @@ from torch import Tensor
 img_model = SentenceTransformer('clip-ViT-B-32')
 
 # Now we load and encode the images
-def load_image(path):
-    return Image.open(path)
+# def load_image(path):
+    # return Image.open(path)
+
+def load_image(url_or_path):
+    if url_or_path.startswith("http://") or url_or_path.startswith("https://"):
+        return Image.open(requests.get(url_or_path, stream=True).raw)
+    else:
+        return Image.open(url_or_path)
 
 
 def convertImageToVectors(imgPath):

@@ -8,25 +8,12 @@ from dotenv import load_dotenv
 load_dotenv()
 VIDEO_CRYPT_ACCESS_KEY = os.getenv("VIDEO_CRYPT_ACCESS_KEY")
 VIDEO_CRYPT_SECRET_KEY = os.getenv("VIDEO_CRYPT_SECRET_KEY")
+VIDEO_CRIPT_GENERATE_THUMBNAILS_URL = os.getenv("VIDEO_CRIPT_GENERATE_THUMBNAILS_URL")
 
-video_data = {'id': '3879063', 'account_id': '10002831', 'title': 'test-02-22sec', 'token': '3879063_0_1589629292717089', 'file_size': '2258.61', 'video_length': '22.2222', 'is_vod': '1', 'live_status': '0', 'file_url': 'https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3879063/1702026223_2458230629338276/1702026219816_749626452548768000_video_VOD.m3u8', 'drm_status': '', 'drm_encrypted': 0}
-
-
-# def time_to_seconds(time_str):
-#     hours, minutes, seconds = map(int, time_str.split(':'))
-#     total_seconds = hours * 3600 + minutes * 60 + seconds
-#     return total_seconds
-
-# time_str = "00:04:09"
-# seconds = time_to_seconds(time_str)
-# print(f"{time_str} is equal to {seconds} seconds.")
-# print(f"{time_str} is equal to {video_data["video_length"]} seconds.")
-
-
-def create_video_thumbnails(access_key, secret_key, video_data):
+def create_video_thumbnails(video_data):
 
     # Set the service URL
-    createThumbnail = "https://api.videocrypt.com/createThumbnail"
+    # VIDEO_CRIPT_GENERATE_THUMBNAILS_URL = 
 
     # Convert video_length from string to float
     video_length_float = float(video_data['video_length'])
@@ -58,12 +45,12 @@ def create_video_thumbnails(access_key, secret_key, video_data):
 
     # Set the header parameters
     headers = {
-        "accessKey": base64.b64encode(access_key.encode()).decode(),
-        "secretKey": base64.b64encode(secret_key.encode()).decode()
+        "accessKey": base64.b64encode(VIDEO_CRYPT_ACCESS_KEY.encode()).decode(),
+        "secretKey": base64.b64encode(VIDEO_CRYPT_SECRET_KEY.encode()).decode()
     }
 
     # Make the POST request
-    response = requests.post(createThumbnail, json=input_params, headers=headers)
+    response = requests.post(VIDEO_CRIPT_GENERATE_THUMBNAILS_URL, json=input_params, headers=headers)
     print("\n ---------------Thumbnails Response--------------------")
     print(response)
 
@@ -79,4 +66,4 @@ def create_video_thumbnails(access_key, secret_key, video_data):
         print(f"Error: {result['message']}")
     print("---------------Thumbnails Response--------------------\n")
 
-create_video_thumbnails(VIDEO_CRYPT_ACCESS_KEY, VIDEO_CRYPT_SECRET_KEY, video_data)
+# create_video_thumbnails(VIDEO_CRYPT_ACCESS_KEY, VIDEO_CRYPT_SECRET_KEY, video_data)

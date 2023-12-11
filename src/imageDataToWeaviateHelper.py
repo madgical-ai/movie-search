@@ -6,8 +6,12 @@ from src.imageToVector import convertImageToVectors
 
 load_dotenv()
 WEAVIATE_CLUSTER_URL = os.getenv("WEAVIATE_CLUSTER_URL")
-IMAGE_WEAVIATE_CLASS_NAME = os.getenv("IMAGE_WEAVIATE_CLASS_NAME")
+VIDEO_CRIPT_IMAGE_WEAVIATE_CLASS_NAME = os.getenv("VIDEO_CRIPT_IMAGE_WEAVIATE_CLASS_NAME")
 # WEAVIATE_CLASS_NAME = "imageDatabase"
+
+
+jsonFolder = "output"
+os.makedirs(jsonFolder, exist_ok=True)
 
 def pushImageDataToWeaviate(data):
     
@@ -21,13 +25,13 @@ def pushImageDataToWeaviate(data):
     schema = client.schema.get()
 
     # Check if the class already exists
-    class_exists = any(cls["class"] == IMAGE_WEAVIATE_CLASS_NAME for cls in schema["classes"])
+    class_exists = any(cls["class"] == VIDEO_CRIPT_IMAGE_WEAVIATE_CLASS_NAME for cls in schema["classes"])
 
     # Define the class name and schema
     # client.schema.delete_all()
     # client.schema.delete_class(IMAGE_WEAVIATE_CLASS_NAME)
     class_obj = {
-        "class": IMAGE_WEAVIATE_CLASS_NAME,
+        "class": VIDEO_CRIPT_IMAGE_WEAVIATE_CLASS_NAME,
         "vectorizer": "none",
         "moduleConfig": {}
     }
@@ -36,10 +40,10 @@ def pushImageDataToWeaviate(data):
     try:
         if not class_exists:
             client.schema.create_class(class_obj)
-            print(f"Class '{IMAGE_WEAVIATE_CLASS_NAME}' created successfully.")
+            print(f"Class '{VIDEO_CRIPT_IMAGE_WEAVIATE_CLASS_NAME}' created successfully.")
     except weaviate.RequestError as e:
         if e.status_code == 409:
-            print(f"Class '{IMAGE_WEAVIATE_CLASS_NAME}' already exists.")
+            print(f"Class '{VIDEO_CRIPT_IMAGE_WEAVIATE_CLASS_NAME}' already exists.")
         else:
             print(f"Error creating class: {e}")
 
@@ -59,17 +63,18 @@ def pushImageDataToWeaviate(data):
                 try:
                     # print(f"Importing segment: {i + 1} in batch {batch_index + 1}")
                     properties = {
-                        "imagePath": d['image_path'],
-                        'time': d["time"],
-                        'video_url': d["video_url"],
-                        'video_url_with_time': d['video_url_time']
+                        "title": d['title'],
+                        'video_id': d["video_id"],
+                        'frame_time': d['frame_time'],
+                        'thumbnail_url': d['thumbnail_url'],
+                        'video_download_url': d["video_download_url"],
                     }
                     # Tokenize the image for vector search
-                    vec = convertImageToVectors(d['image_path'])
+                    vec = convertImageToVectors(d['thumbnail_url'])
 
                     batch.add_data_object(
                         data_object=properties,
-                        class_name=IMAGE_WEAVIATE_CLASS_NAME,
+                        class_name=VIDEO_CRIPT_IMAGE_WEAVIATE_CLASS_NAME,
                         vector=vec
                     )
                     imported_count += 1
@@ -78,8 +83,8 @@ def pushImageDataToWeaviate(data):
 
     print("Image Data import completed.")
 
-    all_objects = client.data_object.get(class_name=IMAGE_WEAVIATE_CLASS_NAME)
-    with open(f'outputJSON/{IMAGE_WEAVIATE_CLASS_NAME}-From-Weaviate.json', 'w', encoding='utf-8') as json_file:
+    all_objects = client.data_object.get(class_name=VIDEO_CRIPT_IMAGE_WEAVIATE_CLASS_NAME)
+    with open(f'{jsonFolder}/{VIDEO_CRIPT_IMAGE_WEAVIATE_CLASS_NAME}-From-Weaviate.json', 'w', encoding='utf-8') as json_file:
         json.dump(all_objects, json_file, ensure_ascii=False, indent=4)
     
     return "done"    

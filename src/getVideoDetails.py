@@ -8,11 +8,12 @@ load_dotenv()
 
 VIDEO_CRYPT_ACCESS_KEY = os.getenv("VIDEO_CRYPT_ACCESS_KEY")
 VIDEO_CRYPT_SECRET_KEY = os.getenv("VIDEO_CRYPT_SECRET_KEY")
+VIDEO_CRIPT_GET_VIDEO_DETAILS = os.getenv("VIDEO_CRIPT_GET_VIDEO_DETAILS")
 
-def get_video_details(access_key, secret_key, video_data):
+def get_video_details(video_data):
     # Set the service URL
     # listTranscribe = "https://api.videocrypt.com/listTranscribe"
-    getVideoDetails = "https://api.videocrypt.com/getVideoDetails"
+    # VIDEO_CRIPT_GET_VIDEO_DETAILS = 
 
     # Set the input parameters
     input_params = {
@@ -27,7 +28,7 @@ def get_video_details(access_key, secret_key, video_data):
     }
 
     # Make the POST request
-    response = requests.post(getVideoDetails, json=input_params, headers=headers)
+    response = requests.post(VIDEO_CRIPT_GET_VIDEO_DETAILS, json=input_params, headers=headers)
 
     # Parse the JSON response
     result = response.json()

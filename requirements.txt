@@ -11,4 +11,5 @@ python-dotenv==1.0.0
 google-api-python-client
 
 extra-streamlit-components
+toxigen
 # pip install extra-streamlit-components

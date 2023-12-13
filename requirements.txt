@@ -11,5 +11,8 @@ python-dotenv==1.0.0
 google-api-python-client
 
 extra-streamlit-components
-toxigen
+
+toxigen==1.1.0
+profanity-check==1.0.3
+# pip install profanity-check
 # pip install extra-streamlit-components

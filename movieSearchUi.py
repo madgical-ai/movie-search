@@ -4,17 +4,18 @@ import os
 import weaviate
 import json
 import pandas as pd
-from src.azureOpenAiHelper import generateAzureOpenAiResponse
+import json
+from src.openAiHelper import generateOpenAiResponse
+from src.prompt import promptV1, checkText, countNoOfOccurrences
 
 from src.searchDataHelper import searchData
 
 from dotenv import load_dotenv
 
 load_dotenv()
+VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME = os.getenv("VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME")
 # WEAVIATE_CLASS_NAME = os.getenv("WEAVIATE_CLASS_NAME")
-WEAVIATE_CLASS_NAME = "PhysicsLaw"
-
-
+# WEAVIATE_CLASS_NAME = "PhysicsLaw"
 
 # Website Fonts and Title
 # st.set_page_config(page_title="Video Search", page_icon="🐍", layout="wide")
@@ -34,7 +35,16 @@ data = {
     "Model Output": [],
     "Prompt Tokens":[],
     "Completion Tokens":[],
-}
+    "Total Cost":[],
+    "Total Tokens":[],
+    "cuss_words_count":[],
+    "DR_Targeting_Society_or_Religion_Count":[],
+    "DR_Army_Count":[],
+    "DR_Navy_Count":[],
+    "DR_Air_Force_Count":[],
+    "DR_National_Flag_Count":[],
+    "Cuss_Word_Found":[],
+    }
 
 container1 = st.container()
 container2 = st.container()
@@ -44,12 +54,13 @@ container4 = st.container()
 # Initialize an empty DataFrame
 result_table = pd.DataFrame()
 prompt = ""
-
 result = ""
+gptModelOutput=""
+# Specify the CSV file name
+fileName = "movie-search"
 
 with container1:
     # if result:
-        gptModelOutput = ""
         ChatgptHeight = None
         llamaHeight = None
         openai_model = "gpt-3.5-turbo"
@@ -63,49 +74,69 @@ with container1:
         if st.button("Search"):
 
             with st.spinner("Searching Data...."):
+
                 print("------------------------------------------------------")
                 print(question)
-                print("--------------------------------")
-                textToCheck = searchData(question,number)
+                print("------------------------------------------------------")
+                if question not in ["Nudity", "Smoking scenes"]:
+                    textToCheck = searchData(question,number)
+                    print("---------------------------------------------")
+                    print(textToCheck)
+                    print("---------------------------------------------")
 
-                print("---------------------------------------------")
-                print(textToCheck)
-                print("---------------------------------------------")
+                    if textToCheck:
+                        result_table['Title'] = [item['title'] for item in textToCheck['data']['Get'][VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME]]
+                        # result_table['Weaviate Distance'] = [item['_additional']["distance"] for item in textToCheck['data']['Get'][VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME]]
+                        result_table['Weaviate Certainty'] = [item['_additional']["certainty"] for item in textToCheck['data']['Get'][VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME]]
+                        result_table['Text'] = [item['text'] for item in textToCheck['data']['Get'][VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME]]
+                        result_table['Start Time'] = [item['start_time_in_seconds'] for item in textToCheck['data']['Get'][VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME]]
+                        result_table['Video HLS Url '] = [item['video_file_url_hls'] for item in textToCheck['data']['Get'][VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME]]
+                        result_table['Video Download Url'] = [item['video_download_url'] for item in textToCheck['data']['Get'][VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME]]
+                        # result_table['Prompt Used'] = [prompt] * len(textToCheck['data']['Get']['RamOne'])
+                        
 
-                prompt += f"You are a grade 10 teacher and your job is to give a answer to the question asked by student according to the given text. Given data ``` {textToCheck}```, focusing on text objects. Question: {question}"
+                    prompt += countNoOfOccurrences
 
-                gptModelOutput,gptCompletionTokens,gptPromptTokens = generateAzureOpenAiResponse(prompt,openai_model)
-                
-                # Append data to the dictionary
-                data["Question"].append(question)
-                data["Model"].append(openai_model)
-                data["Text"].append(textToCheck)
-                data["Model Output"].append(gptModelOutput)
-                data["Prompt"].append(prompt)
-                data["Completion Tokens"].append(gptCompletionTokens)
-                data["Prompt Tokens"].append(gptPromptTokens)
+                    gptModelOutput,gptPromptTokens,gptCompletionTokens,messages,gptTotalCost,gptTotalTokens = generateOpenAiResponse(textToCheck,countNoOfOccurrences,openai_model)
 
+                    # Parse the JSON string
+                    response_json = json.loads(gptModelOutput)
+                    
+                    # Append data to the dictionary
+                    data["Question"].append(question)
+                    data["Text"].append(textToCheck)
+                    data["Model"].append(openai_model)
+                    data["Prompt"].append(messages)
+                    data["Model Output"].append(gptModelOutput)
+                    data["Prompt Tokens"].append(gptPromptTokens)
+                    data["Completion Tokens"].append(gptCompletionTokens)
+                    data["Total Cost"].append(gptTotalCost)
+                    data["Total Tokens"].append(gptTotalTokens)
+                    data["cuss_words_count"].append(response_json["cuss_words_count"])
+                    data["DR_Targeting_Society_or_Religion_Count"].append(response_json["derogatory_remarks_targeting_society_or_religion"])
+                    data["DR_Army_Count"].append(response_json["derogatory_remarks_on_army"])
+                    data["DR_Navy_Count"].append(response_json["derogatory_remarks_on_navy"])
+                    data["DR_Air_Force_Count"].append(response_json["derogatory_remarks_on_air_force"])
+                    data["DR_National_Flag_Count"].append(response_json["derogatory_remarks_on_national_flag"])
+                    data["Cuss_Word_Found"].append(response_json["cuss_word_names"])
+                    
+                    # Create a DataFrame from the updated data dictionary
+                    df2 = pd.DataFrame(data)
 
-                # Specify the CSV file name
-                fileName = "video-search"
+                    # Check if the file already exists
+                    file_exists2 = os.path.exists(f"{fileName}.csv")
 
-                # Check if the file already exists
-                file_exists = os.path.exists(f"{fileName}.csv")
+                    # Append the DataFrame to the CSV file without removing existing data
+                    if not file_exists2:
+                        df2.to_csv(f"{fileName}.csv", mode='w', header=True, index=False, encoding="utf-8")
+                    else:
+                        df2.to_csv(f"{fileName}.csv", mode='a', header=False, index=False, encoding="utf-8")
 
-                # Print a message before writing data to the CSV file
-                print("--------------------------------")
-                print(f"Data writing to {fileName}.csv file...")
+                    print(f"Data written to {fileName}.csv file...")
 
-                # Create a DataFrame from the data dictionary
-                df = pd.DataFrame(data)
-
-                # Append the DataFrame to the CSV file without removing existing data
-                df.to_csv(f"{fileName}.csv", mode='a', header=False, index=False, encoding="utf-8")
-
-
-                # Print a message after writing data to the CSV file
-                print(f"Data written to {fileName}.csv file...")
-                print("--------------------------------")
+                else:
+                    # Print images
+                    st.write("Images")
 
             with container2:
                 if not result_table.empty:

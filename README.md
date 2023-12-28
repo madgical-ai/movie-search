@@ -1,5 +1,5 @@
 <h1 align="center">
-    <b>Semantic Video Search</b> 
+    <b>Movie Search</b> 
 <br>
 </h1>
 
@@ -14,6 +14,7 @@ git clone https://github.com/madgical-ai/movie-search.git
 cd movie-search
 ```
 
+[Video sample](https://drive.google.com/file/d/1SYShTqQcIdGLYgsQFaJxx0sfoKArGyY6/view?usp=sharing)
 
 ## Required Package 
 
@@ -25,17 +26,23 @@ pip3 install -r requirements.txt
 
 ## Instruction
 
+- First run the following command to start the defined services and containers 
+    ```
+    docker-compose up -d
+    ```
+
 - Created ```.env``` file and then add details in the ```.env file```
 
     Example:
     ```
-    AZURE_OPENAI_API_BASE = "<PROXY SERVER URL>"
-    AZURE_OPENAI_API_TYPE  = "azure"
-    AZURE_OPENAI_API_KEY = "dndskjcns"
-    AZURE_OPENAI_API_VERSION  = "2023-03-15-preview"
-    AZURE_OPENAI_USER_ID  = "<USER_ID proxy server>"
     VIDEO_CRYPT_ACCESS_KEY = "<Access key from VideoCript>"
     VIDEO_CRYPT_SECRET_KEY = "<Secret key from VideoCript>"
+    WEAVIATE_CLUSTER_URL = "http://localhost:2400"
+    VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME = VideoCriptTextData
+    OPENAI_API_KEY = <OpenAi api key>
+    VIDEO_CRIPT_GENERATE_TRANSCRIBE_FILE_URL = "https://api.videocrypt.com/GenerateTranscript"
+    VIDEO_CRIPT_GENERATE_THUMBNAILS_URL = "https://api.videocrypt.com/createThumbnail"
+    VIDEO_CRIPT_GET_VIDEO_DETAILS = "https://api.videocrypt.com/getVideoDetails"
     ```
 - After creating .env file you need to go inside videoCript folder you can do it by using the following command:
     ```
@@ -69,3 +76,8 @@ pip3 install -r requirements.txt
     ```
     python3 getVideoThumbnails.py
     ```
+- For Using Movie Search UI then you need to use the following command:
+    ```
+    streamlit run movieSearchUi.py
+    ``` 
+    In UI you can select question from dorpdown and the number of result you want to return default is 5 and then press on search button.

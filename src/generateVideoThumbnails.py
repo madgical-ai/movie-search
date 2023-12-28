@@ -24,8 +24,11 @@ def create_video_thumbnails(video_data):
     # Extract frame rate and calculate time intervals
     frameRateNumerator = 1
     frameRateDenominator = 1
+    print("------------------------------------max_captures_video------------------------ ")
     print(max_captures_video_time)
-    print(max_captures)
+    print("frameRateNumerator - ",frameRateNumerator)
+    print("frameRateDenominator - ",frameRateDenominator)
+    # print(max_captures)
     
     # Set the input parameters
     input_params = {

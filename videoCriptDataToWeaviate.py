@@ -26,14 +26,16 @@ VIDEO_CRIPT_IMAGE_WEAVIATE_CLASS_NAME = os.getenv("VIDEO_CRIPT_IMAGE_WEAVIATE_CL
 # client Video Data 
 # video_data = {'id': '3878240', 'account_id': '10002831', 'title': 'Sample MX Video', 'token': '3878240_0_7982816139926658', 'file_size': '948356.71', 'video_length': '2432.32', 'is_vod': '1', 'live_status': '0', 'file_url': 'https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3878240/1701931828_4462373797609623/1701870482943_799197347624100600_video_VOD.m3u8', 'drm_status': '', 'drm_encrypted': 0}
 
-video_data = {'id': '3881027', 'account_id': '10002831', 'title': 'Sample MX Video - test', 'token': '3881027_0_5504969059605334', 'file_size': '948356.71', 'video_length': '2432.32', 'is_vod': '1', 'live_status': '0', 'file_url': 'https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8', 'drm_status': '', 'drm_encrypted': 0}
+# video_data = {'id': '3881027', 'account_id': '10002831', 'title': 'Sample MX Video - test', 'token': '3881027_0_5504969059605334', 'file_size': '948356.71', 'video_length': '2432.32', 'is_vod': '1', 'live_status': '0', 'file_url': 'https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3881027/1702285148_2421163839989886/1702284947898_148583977353184160_video_VOD.m3u8', 'drm_status': '', 'drm_encrypted': 0}
+
+video_data = {'id': '3906062', 'account_id': '10002831', 'title': 'Sample MX Video', 'token': '3906062_0_6185975209995500', 'file_size': '948356.71', 'video_length': '2432.32', 'is_vod': '1', 'live_status': '0', 'file_url': 'https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3906062/1703138292_9423198083790564/1703137535370_770805509398789100_video_VOD.m3u8', 'drm_status': '', 'drm_encrypted': 0}
 
 
 # for generating transcribe data only 
 # generate_transcribe_file(video_data)
 
 # for generating thumbnails data only 
-# create_video_thumbnails(video_data)
+create_video_thumbnails(video_data)
 
 
 # imageDataArray = get_video_thumbnails(video_data)
@@ -41,19 +43,19 @@ video_data = {'id': '3881027', 'account_id': '10002831', 'title': 'Sample MX Vid
 # print(len(imageDataArray))
 
 
-videoTextArray = get_video_transcribe(video_data)
-textResult = pushDataToWeaviate(videoTextArray)
+# videoTextArray = get_video_transcribe(video_data)
+# textResult = pushDataToWeaviate(videoTextArray)
 
 
-try:
-    # if imageResult is not None:
-        # print("image Data pushed to weaviate completed")
+# try:
+#     # if imageResult is not None:
+#         # print("image Data pushed to weaviate completed")
     
-    if textResult is not None:
-        print("Text Data pushed to weaviate completed")
+#     if textResult is not None:
+#         print("Text Data pushed to weaviate completed")
 
-except Exception as e:
-    print(f"An error occurred: {e}")
+# except Exception as e:
+#     print(f"An error occurred: {e}")
 
 
 

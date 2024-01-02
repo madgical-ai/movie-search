@@ -16,3 +16,4 @@ toxigen==1.1.0
 profanity-check==1.0.3
 # pip install profanity-check
 # pip install extra-streamlit-components
+# pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib  # for google drive 

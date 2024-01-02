@@ -5,6 +5,7 @@ from langchain.callbacks import get_openai_callback
 import os
 import pandas as pd
 from dotenv import load_dotenv
+
 # from prompt import promptV1, checkText, countNoOfOccurrences
 load_dotenv()
 
@@ -12,27 +13,30 @@ load_dotenv()
 
 fileName2 = "OpenAI_Response_counts"
 
-def generateOpenAiResponse(text,prompt,openai_model):
-    
-    llm = ChatOpenAI(openai_api_key=os.getenv("OPENAI_API_KEY"),temperature=0.0, model_name=openai_model)
+
+def generateOpenAiResponse(text, prompt, openai_model):
+    llm = ChatOpenAI(
+        openai_api_key=os.getenv("OPENAI_API_KEY"),
+        temperature=0.0,
+        model_name=openai_model,
+    )
     messages = [
-    SystemMessage(
-        # content=promptV1
-        # content=checkText
-        content=prompt
-    ),
-    HumanMessage(
-        content=f"Given text: '{text}'"
-    ),]
+        SystemMessage(
+            # content=promptV1
+            # content=checkText
+            content=prompt
+        ),
+        HumanMessage(content=f"Given text: '{text}'"),
+    ]
 
     with get_openai_callback() as cb:
         # Generate a model response
         response = llm(messages)
-        gptTotalTokens = cb.total_tokens 
-        gptTotalCost  = cb.total_cost
-        gptSuccessfulRequests  = cb.successful_requests
-        gptCompletionTokens  = cb.completion_tokens
-        gptPromptTokens  = cb.prompt_tokens
+        gptTotalTokens = cb.total_tokens
+        gptTotalCost = cb.total_cost
+        gptSuccessfulRequests = cb.successful_requests
+        gptCompletionTokens = cb.completion_tokens
+        gptPromptTokens = cb.prompt_tokens
 
         # Print or use the generated response
         print("\n-----------------------OpenAiHelper.py----------------------")
@@ -48,7 +52,15 @@ def generateOpenAiResponse(text,prompt,openai_model):
         print(gptSuccessfulRequests)
         print("\n-----------------------OpenAiHelper.py----------------------")
 
-        return response.content,gptPromptTokens,gptCompletionTokens,messages,gptTotalCost,gptTotalTokens
+        return (
+            response.content,
+            gptPromptTokens,
+            gptCompletionTokens,
+            messages,
+            gptTotalCost,
+            gptTotalTokens,
+        )
+
 
 # data2 = {
 #         "Text": [],
@@ -69,7 +81,7 @@ def generateOpenAiResponse(text,prompt,openai_model):
 #     }
 # print("--------------------------------")
 # response,gptPromptTokens,gptCompletionTokens,messages,gptTotalCost,gptTotalTokens = generateOpenAiResponse(text)
-    
+
 #     # Parse the JSON string
 # response_json = json.loads(response)
 #     # Access and print the "cuss_words_count" field
@@ -89,7 +101,7 @@ def generateOpenAiResponse(text,prompt,openai_model):
 #     data2["DR_Air_Force_Count"].append(response_json["derogatory_remarks_on_air_force"])
 #     data2["DR_National_Flag_Count"].append(response_json["derogatory_remarks_on_national_flag"])
 #     data2["Cuss_Word_Found"].append(response_json["cuss_word_names"])
-    
+
 
 #     # Create a DataFrame from the updated data dictionary
 #     df2 = pd.DataFrame(data2)

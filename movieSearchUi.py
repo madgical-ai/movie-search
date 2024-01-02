@@ -9,10 +9,15 @@ from src.openAiHelper import generateOpenAiResponse
 from src.prompt import promptV1, checkText, countNoOfOccurrences
 
 from src.searchDataHelper import searchData
+from sentence_transformers import SentenceTransformer, util
+from PIL import Image
+text_model = SentenceTransformer('sentence-transformers/clip-ViT-B-32-multilingual-v1')
 
 from dotenv import load_dotenv
 
 load_dotenv()
+WEAVIATE_CLUSTER_URL = os.getenv("WEAVIATE_CLUSTER_URL")
+IMAGE_WEAVIATE_CLASS_NAME = os.getenv("IMAGE_WEAVIATE_CLASS_NAME")
 VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME = os.getenv("VIDEO_CRIPT_TEXT_WEAVIATE_CLASS_NAME")
 # WEAVIATE_CLASS_NAME = os.getenv("WEAVIATE_CLASS_NAME")
 # WEAVIATE_CLASS_NAME = "PhysicsLaw"
@@ -24,6 +29,33 @@ st.set_page_config(page_title="Movie Search", page_icon="🐍")
 st.markdown("<h1 style='text-align: center;'>Movie Search</h1>", unsafe_allow_html=True)
 # Add space below the title
 st.markdown("<div style='margin-bottom: 20px;'></div>", unsafe_allow_html=True)
+
+
+
+def textToVectorSentenceTransformer(text):
+    texts = [text]
+    text_embeddings = text_model.encode(texts)
+    return text_embeddings
+
+# Weaviate configuration and Initialize the Weaviate client
+client = weaviate.Client(url=WEAVIATE_CLUSTER_URL)
+
+def searchImages(question,number):
+    # vectors = convertTextToVectors(question)
+    vectors = textToVectorSentenceTransformer(question)
+    response = (
+        client.query
+        .get(f"{IMAGE_WEAVIATE_CLASS_NAME}", ["imagePath","time","video_url","video_url_with_time"])
+        .with_near_vector({
+            "vector": vectors[0],
+            # "certainty": 0.85
+            })
+        # .with_limit(5)
+        .with_limit(number)
+        .with_additional(["certainty"])
+        .do()
+        )
+    return(response)
 
 
 # Initialize a dictionary to store data
@@ -50,6 +82,7 @@ container1 = st.container()
 container2 = st.container()
 container3 = st.container()
 container4 = st.container()
+ImageContainer = st.container()
 
 # Initialize an empty DataFrame
 result_table = pd.DataFrame()
@@ -137,6 +170,33 @@ with container1:
                 else:
                     # Print images
                     st.write("Images")
+                    try:
+                        response = searchImages(question,number)
+                        # st.write(response)
+                    except Exception as e:
+                        st.warning(f"An error occurred: {e}")
+
+
+            with ImageContainer:
+                # Check if response is not None before accessing it
+                if response is not None:
+                    st.subheader('Search Results', divider='rainbow')
+                    image_data = response["data"]["Get"][IMAGE_WEAVIATE_CLASS_NAME]
+                    # image_paths = [entry['imagePath'] for entry in image_data]
+
+                    # for path in image_paths:
+                        # st.image(path)
+                    for entry in image_data:
+                            st.image(entry['imagePath'])
+                            st.write(entry['video_url_with_time'])
+                            st.write(entry['_additional'])
+                            print("\n")
+                            print(question)
+                            print(entry['imagePath'])
+                            # st.write(f"Video URL: {entry['video_url_with_time']}")
+                            print(entry['video_url_with_time'])
+                            print(entry['_additional'])
+
 
             with container2:
                 if not result_table.empty:

@@ -9,10 +9,10 @@ WEAVIATE_CLUSTER_URL = os.getenv("WEAVIATE_CLUSTER_URL")
 IMAGE_WEAVIATE_CLASS_NAME = os.getenv("IMAGE_WEAVIATE_CLASS_NAME")
 # WEAVIATE_CLASS_NAME = "imageDatabase"
 
+
 def pushImageDataToWeaviate(data):
-    
     # Your JSON data with a larger number of items
-    print("\nImage Data Lenth (array of dictonary -  )",len(data))
+    print("\nImage Data Lenth (array of dictonary -  )", len(data))
 
     # Initialize Weaviate client
     client = weaviate.Client(url=WEAVIATE_CLUSTER_URL)
@@ -23,18 +23,19 @@ def pushImageDataToWeaviate(data):
     # print(schema)
     for i in schema["classes"]:
         print(i["class"])
-    
+
     print("---------------------weaviate schema--------------------\n")
-    # client.schema.delete_class(IMAGE_WEAVIATE_CLASS_NAME)
+    client.schema.delete_class(IMAGE_WEAVIATE_CLASS_NAME)
     schema = client.schema.get()
 
     for i in schema["classes"]:
         print(i["class"])
     print("---------------------weaviate schema--------------------\n")
 
-
     # Check if the class already exists
-    class_exists = any(cls["class"] == IMAGE_WEAVIATE_CLASS_NAME for cls in schema["classes"])
+    class_exists = any(
+        cls["class"] == IMAGE_WEAVIATE_CLASS_NAME for cls in schema["classes"]
+    )
 
     # Define the class name and schema
     # client.schema.delete_all()
@@ -42,7 +43,7 @@ def pushImageDataToWeaviate(data):
     class_obj = {
         "class": IMAGE_WEAVIATE_CLASS_NAME,
         "vectorizer": "none",
-        "moduleConfig": {}
+        "moduleConfig": {},
     }
 
     # Create the class in Weaviate or check if it exixt or not
@@ -58,8 +59,8 @@ def pushImageDataToWeaviate(data):
 
     # Split your data into batches
     batch_size = 30
-    data_batches = [data[i:i + batch_size] for i in range(0, len(data), batch_size)]
-    print("\n Batch Data lenth -  ",len(data_batches))
+    data_batches = [data[i : i + batch_size] for i in range(0, len(data), batch_size)]
+    print("\n Batch Data lenth -  ", len(data_batches))
 
     # Initialize a counter for imported data
     imported_count = 0
@@ -72,27 +73,31 @@ def pushImageDataToWeaviate(data):
                 try:
                     # print(f"Importing segment: {i + 1} in batch {batch_index + 1}")
                     properties = {
-                        "imagePath": d['image_path'],
-                        'time': d["time"],
-                        'video_url': d["video_url"],
-                        'video_url_with_time': d['video_url_time']
+                        "imagePath": d["image_path"],
+                        "time": d["time"],
+                        "video_url": d["video_url"],
+                        "video_url_with_time": d["video_url_time"],
                     }
                     # Tokenize the image for vector search
-                    vec = convertImageToVectors(d['image_path'])
+                    vec = convertImageToVectors(d["image_path"])
 
                     batch.add_data_object(
                         data_object=properties,
                         class_name=IMAGE_WEAVIATE_CLASS_NAME,
-                        vector=vec
+                        vector=vec,
                     )
                     imported_count += 1
                 except Exception as e:
-                    print(f"Error importing segment {i + 1} in batch {batch_index + 1}: {str(e)}")
+                    print(
+                        f"Error importing segment {i + 1} in batch {batch_index + 1}: {str(e)}"
+                    )
 
     print("Image Data import completed.")
 
     all_objects = client.data_object.get(class_name=IMAGE_WEAVIATE_CLASS_NAME)
-    with open(f'output/{IMAGE_WEAVIATE_CLASS_NAME}-From-Weaviate.json', 'w', encoding='utf-8') as json_file:
+    with open(
+        f"output/{IMAGE_WEAVIATE_CLASS_NAME}-From-Weaviate.json", "w", encoding="utf-8"
+    ) as json_file:
         json.dump(all_objects, json_file, ensure_ascii=False, indent=4)
-    
-    return "done"    
+
+    return "done"

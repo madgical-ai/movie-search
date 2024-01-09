@@ -14,7 +14,8 @@ load_dotenv()
 WEAVIATE_CLUSTER_URL = os.getenv("WEAVIATE_CLUSTER_URL")
 IMAGE_WEAVIATE_CLASS_NAME = os.getenv("IMAGE_WEAVIATE_CLASS_NAME")
 
-def downloadYoutubeVideos(video_url,videoSavePath):
+
+def downloadYoutubeVideos(video_url, videoSavePath):
     # Ensure the save path exists
     os.makedirs(videoSavePath, exist_ok=True)
 
@@ -52,8 +53,8 @@ def format_timedelta(td):
     ms = round(ms / 1e4)
     return f"{result}.{ms:02}".replace(":", "-")
 
-def video_preprocessing(video_url, output_folder, videoSavePath, fps, new_filename):
 
+def video_preprocessing(video_url, output_folder, videoSavePath, fps, new_filename):
     # Download the YouTube video
     # new_filename = downloadYoutubeVideos(video_url,videoSavePath)
 
@@ -92,30 +93,34 @@ def video_preprocessing(video_url, output_folder, videoSavePath, fps, new_filena
         # Save frames at the specified frame rate
         if count % int(cap.get(cv2.CAP_PROP_FPS) / fps) == 0:
             frame_duration = count / cap.get(cv2.CAP_PROP_FPS)
-            frame_duration_formatted = format_timedelta(timedelta(seconds=frame_duration))
-            frame_filename = os.path.join(output_folder, f"{video_id}-{frame_duration_formatted}.jpg")
-            
+            frame_duration_formatted = format_timedelta(
+                timedelta(seconds=frame_duration)
+            )
+            frame_filename = os.path.join(
+                output_folder, f"{video_id}-{frame_duration_formatted}.jpg"
+            )
+
             # Add information to the array
             frame_info = {
-                'image_path': frame_filename,
-                'time': frame_duration,
-                'video_url': video_url,
-                'video_url_time': f"{video_url}&t={frame_duration}s"
+                "Name": frame_filename,
+                "image_path": frame_filename,
+                "time": frame_duration,
+                "video_url": video_url,
+                "video_url_time": f"{video_url}&t={frame_duration}s",
             }
-            
+
             frames_info.append(frame_info)
 
             cv2.imwrite(frame_filename, frame)
         count += 1
 
-
-
     cap.release()
 
     print("image saved done -- ", count)
-    print("\n",frames_info)
-    
+    print("\n", frames_info)
+
     return frames_info
+
 
 def create_csv_for_video_frames(output_folder, csv_filename):
     frame_files = [f for f in os.listdir(output_folder) if f.endswith(".jpg")]

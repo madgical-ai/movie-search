@@ -19,6 +19,7 @@ for i in schema["classes"]:
 
 # client.schema.delete_class("VideoCriptImageData")
 # client.schema.delete_class("VideoCriptTextData2")
+# client.schema.delete_class("MovieImagesData")
 # client.schema.delete_class("ArcticVets_NatGeoWILD")
 # client.schema.delete_class("ImagesData")
 # client.schema.delete_class("PhysicsLaw")

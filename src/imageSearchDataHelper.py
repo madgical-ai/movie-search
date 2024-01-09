@@ -4,12 +4,11 @@ from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer, util
 
 
-
 load_dotenv()
 WEAVIATE_CLUSTER_URL = os.getenv("WEAVIATE_CLUSTER_URL")
 IMAGE_WEAVIATE_CLASS_NAME = os.getenv("IMAGE_WEAVIATE_CLASS_NAME")
 
-text_model = SentenceTransformer('sentence-transformers/clip-ViT-B-32-multilingual-v1')
+text_model = SentenceTransformer("sentence-transformers/clip-ViT-B-32-multilingual-v1")
 
 
 # Weaviate configuration and Initialize the Weaviate client
@@ -22,16 +21,24 @@ def textToVectorSentenceTransformer(text):
     return text_embeddings
 
 
-def searchImages(question,number):
+def searchImages(question, number):
     # vectors = convertTextToVectors(question)
     vectors = textToVectorSentenceTransformer(question)
     response = (
-        client.query
-        .get(f"{IMAGE_WEAVIATE_CLASS_NAME}", ["imagePath","time","video_url","video_url_with_time"])
-        .with_near_vector({
-            "vector": vectors[0]})
-        # .with_limit(5)
-        .with_limit(number)
-        .do()
+        client.query.get(
+            f"{IMAGE_WEAVIATE_CLASS_NAME}",
+            # ["Name", "imagePath", "time", "video_url", "video_url_with_time"],
+            ["imagePath", "time", "video_url", "video_url_with_time"],
         )
-    return(response)
+        .with_near_vector(
+            {
+                "vector": vectors[0],
+                # "certainty": 0.85
+            }
+        )
+        # .with_limit(5)
+        # .with_limit(number)
+        .with_additional(["certainty"])
+        .do()
+    )
+    return response

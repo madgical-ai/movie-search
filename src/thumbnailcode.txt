@@ -1,0 +1,143 @@
+Create Video Thumbnails -:
+
+              This API use to create video Thumbnails.
+              METHOD -:     Post
+              
+SERVICE URL -:  https://vcdev.videocrypt.com/createThumbnail
+
+
+            Input Parameter -:
+            
+ For this API you have to pass input parameter in body (Pass your data in raw).
+
+
+            
+  
+            {
+                "id": "xxxx_x_xxxxxxxxxxxxx",
+                "Width": 1280,
+                "Height": 720,
+                "CallbackURL": "https://demo",
+                "CodecSettings": {
+                    "FrameCaptureSettings": {
+                        "FramerateNumerator": 1, (No. of frame)
+                        "FramerateDenominator": 5, (No. of Second)
+                        "MaxCaptures": 5,
+                        "Quality": 99 (maximum 100 quality)
+                    }
+                }
+            }           
+            
+
+            
+Header Parameter -:
+
+
+            
+ For this API you have to pass Header parameter in Header.
+
+
+            
+Note: Kindly encode your access and secret keys using a base64 encoder.) 
+
+
+            
+  
+            accessKey:TTdBSlNPVVFRUs0RzJORDY5S===
+            secretKey:WHc3QmhnS0VNUZBK1ZRQ29HWk1wc2M2UFMyYUltM2pmSFR5TGt===
+            
+
+           All parameters are required.
+            
+            
+Response -: 
+
+
+            Success Response
+        
+        
+  
+        {
+            "status":true,
+            "message":"Thumbnail creation inprogress.",
+            "data":{"job_id":"J_658d482fa1dc2_IufS0e","id":"xxxx_x_xxxxxxxxxxxxx"},
+            "error":[]
+        }
+        
+ 
+
+
+       Failure Responses  
+        There are multiple type of failure responses based on the input parameters passed.
+
+        
+  
+        { 
+            "status": false, 
+            "message": "Invalid credentials.",
+            "data":[],
+            "error":[] 
+        } 
+        
+        { 
+            "status": false, 
+            "message": "You are not authorized to create thumbnails.",
+            "data":[],
+            "error":[] 
+        } 
+        
+        { 
+            "status": false, 
+            "message": "Data not found.",
+            "data":[],
+            "error":[] 
+        }  
+        
+        { 
+            "status": false, 
+            "message": "Please provide valid values for the following fields: Field name.",
+            "data":[],
+            "error":[] 
+        } 
+       
+        { 
+            "status": false, 
+            "message": "Missing required fields: Field name.", 
+            "data":[],
+            "error":[] 
+        } 
+        
+        { 
+            "status": false, 
+            "message": "Invalid CallbackURL.", 
+            "data":[],
+            "error":[] 
+        } 
+
+        { 
+            "status": false, 
+            "message": "FramerateDenominator should be less than the video length.", 
+            "data":[],
+            "error":[] 
+        } 
+
+        { 
+            "status": false, 
+            "message": "Quality value should be less than 100.", 
+            "data":[],
+            "error":[] 
+        } 
+
+        { 
+            "status": false, 
+            "message": "Please provide numeric values for the following keys: Field name.", 
+            "data":[],
+            "error":[] 
+        } 
+
+        { 
+            "status": false, 
+            "message": "Invalid request method. Expected POST.", 
+            "data":[],
+            "error":[] 
+        }

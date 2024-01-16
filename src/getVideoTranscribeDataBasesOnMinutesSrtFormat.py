@@ -64,11 +64,20 @@ def get_transcription_data_based_on_minutes(video_data):
 
         print(f"File downloaded and saved as '{filename}'")
 
-        with open(filename, "r") as file:
+        filename = os.path.join(folder_name, "srtSubtitles.srt")
+        print(f"File downloaded and saved as '{filename}'")
+
+        with open(filename, "r", encoding="utf-8") as file:
             content = file.read()
 
+        # pattern = re.compile(
+        #     r"(\d+)\n(\d{2}:\d{2}:\d{2},\d{3}) --> (\d{2}:\d{2}:\d{2},\d{3})\n(.+?)(?=\n\d+|$)",
+        #     re.DOTALL,
+        # )
+
+        # Use regular expressions to extract subtitle information
         pattern = re.compile(
-            r"(\d+)\n(\d{2}:\d{2}:\d{2}\.\d{3}) --> (\d{2}:\d{2}:\d{2}\.\d{3})\n(.+?)(?=\n\d+|$)",
+            r"(\d+)\n(\d{2}:\d{2}:\d{2},\d{3}) --> (\d{2}:\d{2}:\d{2},\d{3})\n(.+?)\n\n",
             re.DOTALL,
         )
         matches = pattern.findall(content)
@@ -88,11 +97,19 @@ def get_transcription_data_based_on_minutes(video_data):
 
             # Convert start and end time to seconds including milliseconds
             start_time_components = start_time.split(":")
+            print(
+                "----------------------------------float------------------------------"
+            )
+            print(start_time_components)
+            print(type(start_time_components))
+            print(start_time)
+            print(type(start_time))
+
             start_time_seconds = (
                 int(start_time_components[0]) * 3600
                 + int(start_time_components[1]) * 60  # hours to seconds
                 + float(  # minutes to seconds
-                    start_time_components[2]
+                    start_time_components[2].replace(",", ".")
                 )  # seconds including milliseconds
             )
 
@@ -101,7 +118,7 @@ def get_transcription_data_based_on_minutes(video_data):
                 int(end_time_components[0]) * 3600
                 + int(end_time_components[1]) * 60  # hours to seconds
                 + float(  # minutes to seconds
-                    end_time_components[2]
+                    end_time_components[2].replace(",", ".")
                 )  # seconds including milliseconds
             )
 
@@ -123,8 +140,8 @@ def get_transcription_data_based_on_minutes(video_data):
                         "title": title,
                         "video_id": videoId,
                         # 'start_time': current_start_time,
-                        "start_time": current_start_time[0],
-                        "end_time": current_end_time,
+                        "start_time": current_start_time[0].replace(",", "."),
+                        "end_time": current_end_time.replace(",", "."),
                         "text": current_chunk.strip(),
                         "total_video_Duration": totalDuration,
                         "video_file_url_hls": fileUrlHls,
@@ -147,8 +164,8 @@ def get_transcription_data_based_on_minutes(video_data):
                     "index": int(index),
                     "title": title,
                     "video_id": videoId,
-                    "start_time": current_start_time[0],
-                    "end_time": final_end_Time,
+                    "start_time": current_start_time[0].replace(",", "."),
+                    "end_time": final_end_Time.replace(",", "."),
                     "text": current_chunk.strip(),
                     "total_video_Duration": totalDuration,
                     "video_file_url_hls": fileUrlHls,

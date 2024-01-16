@@ -41,10 +41,10 @@ video_data = {
 # generate_transcribe_file(video_data)
 
 # for generating thumbnails data only
-create_video_thumbnails(video_data)
+# create_video_thumbnails(video_data)
 
 
-# imageDataArray = get_video_thumbnails(video_data)
+imageDataArray = get_video_thumbnails(video_data)
 # imageResult = pushImageDataToWeaviate(imageDataArray)
 # print(len(imageDataArray))
 

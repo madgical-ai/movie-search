@@ -39,18 +39,18 @@ def generateOpenAiResponse(text, prompt, openai_model):
         gptPromptTokens = cb.prompt_tokens
 
         # Print or use the generated response
-        print("\n-----------------------OpenAiHelper.py----------------------")
-        print(text)
-        print(response)
-        print("--------------------------------")
-        print(response.content)
-        print(type(response))
-        print(gptCompletionTokens)
-        print(gptPromptTokens)
-        print(gptTotalTokens)
-        print(gptTotalCost)
-        print(gptSuccessfulRequests)
-        print("\n-----------------------OpenAiHelper.py----------------------")
+        # print("\n-----------------------OpenAiHelper.py----------------------")
+        # print(text)
+        # print(response)
+        # print("--------------------------------")
+        # print(response.content)
+        # print(type(response))
+        # print(gptCompletionTokens)
+        # print(gptPromptTokens)
+        # print(gptTotalTokens)
+        # print(gptTotalCost)
+        # print(gptSuccessfulRequests)
+        # print("\n-----------------------OpenAiHelper.py----------------------")
 
         return (
             response.content,

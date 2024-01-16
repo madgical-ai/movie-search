@@ -30,13 +30,8 @@ def searchImages(question, number):
             # ["Name", "imagePath", "time", "video_url", "video_url_with_time"],
             ["imagePath", "time", "video_url", "video_url_with_time"],
         )
-        .with_near_vector(
-            {
-                "vector": vectors[0],
-                # "certainty": 0.85
-            }
-        )
-        # .with_limit(5)
+        .with_near_vector({"vector": vectors[0], "certainty": 0.62})
+        .with_limit(1000)
         # .with_limit(number)
         .with_additional(["certainty"])
         .do()

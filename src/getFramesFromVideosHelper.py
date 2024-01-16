@@ -68,12 +68,12 @@ def video_preprocessing(video_url, output_folder, videoSavePath, fps, new_filena
     file_list = os.listdir(videoSavePath)
     # file_list = f"{videoSavePath}/{new_filename}"
 
-    print("\n--------------------------------file_list--------------------------------")
-    print(new_filename)
-    print(file_list)
-    print("--------------------------------file_list--------------------------------\n")
-    print(file_list[0])
-    print("--------------------------------file_list--------------------------------\n")
+    # print("\n--------------------------------file_list--------------------------------")
+    # print(new_filename)
+    # print(file_list)
+    # print("--------------------------------file_list--------------------------------\n")
+    # print(file_list[0])
+    # print("--------------------------------file_list--------------------------------\n")
 
     # Load the video
     # cap = cv2.VideoCapture(os.path.join(videoSavePath, file_list[0]))
@@ -117,7 +117,7 @@ def video_preprocessing(video_url, output_folder, videoSavePath, fps, new_filena
     cap.release()
 
     print("image saved done -- ", count)
-    print("\n", frames_info)
+    # print("\n", frames_info)
 
     return frames_info
 

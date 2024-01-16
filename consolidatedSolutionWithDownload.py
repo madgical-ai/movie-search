@@ -139,156 +139,156 @@ print(f"Data written to {textFileName}.csv file...")
 
 # --------------------- Image -----------------------
 
-# import pprint
-# import os
-# from src.imageSearchDataHelper import searchImages
-# from src.imageDataToWeaviateHelper import pushImageDataToWeaviate
-# from src.getFramesFromVideosHelper import (
-#     video_preprocessing,
-#     create_csv_for_video_frames,
-# )
-# from dotenv import load_dotenv
-# import pandas as pd
-# import requests
-# import subprocess
+import pprint
+import os
+from src.imageSearchDataHelper import searchImages
+from src.imageDataToWeaviateHelper import pushImageDataToWeaviate
+from src.getFramesFromVideosHelper import (
+    video_preprocessing,
+    create_csv_for_video_frames,
+)
+from dotenv import load_dotenv
+import pandas as pd
+import requests
+import subprocess
 
-# load_dotenv()
-# WEAVIATE_CLUSTER_URL = os.getenv("WEAVIATE_CLUSTER_URL")
-# IMAGE_WEAVIATE_CLASS_NAME = os.getenv("IMAGE_WEAVIATE_CLASS_NAME")
+load_dotenv()
+WEAVIATE_CLUSTER_URL = os.getenv("WEAVIATE_CLUSTER_URL")
+IMAGE_WEAVIATE_CLASS_NAME = os.getenv("IMAGE_WEAVIATE_CLASS_NAME")
 
-# imageFileName = "profinity-movie-search-images"
-# imageData = {
-#     "Title": [],
-#     "Question": [],
-#     "Weaviate Certainty Score": [],
-#     "Images": [],
-#     "Start Time": [],
-#     "Video URL": [],
-# }
+imageFileName = "profinity-movie-search-images"
+imageData = {
+    "Title": [],
+    "Question": [],
+    "Weaviate Certainty Score": [],
+    "Images": [],
+    "Start Time": [],
+    "Video URL": [],
+}
 
-# # Path to the directory containing your images and Where to save downloaded videos
-# imageDirectory = "images"
-# videoSavePath = "Videos"
-# csvFramesFile = "output/video_frames.csv"
-# fps = 1  # Frames per second
-# # new_filename = "Sample_MX_Video.mp4"
-# video_name = video_data["title"]
-# new_filename = f"{video_name}.mp4"
-# os.makedirs(videoSavePath, exist_ok=True)
-
-
-# # Define the video URLs
-# video_urls = [
-#     # "https://drive.google.com/file/d/1QSocDebTBM14B9uandQqd6PAXo5PrwcF/view",
-#     "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3921737/1704792969_2818107061889017/1704791827614_658733090626124200_video_VOD720p30.mp4"
-# ]
+# Path to the directory containing your images and Where to save downloaded videos
+imageDirectory = "images"
+videoSavePath = "Videos"
+csvFramesFile = "output/video_frames.csv"
+fps = 1  # Frames per second
+# new_filename = "Sample_MX_Video.mp4"
+video_name = video_data["title"]
+new_filename = f"{video_name}.mp4"
+os.makedirs(videoSavePath, exist_ok=True)
 
 
-# allImgData = []
-# # for video_url in video_urls:
-# #     # Extract file extensions
-# #     extension = video_url.split(".")[-1]
+# Define the video URLs
+video_urls = [
+    video_data["file_url"]
+    # "https://drive.google.com/file/d/1QSocDebTBM14B9uandQqd6PAXo5PrwcF/view",
+    # "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3921737/1704792969_2818107061889017/1704791827614_658733090626124200_video_VOD720p30.mp4"
+]
 
-# #     # Define the new filename within the 'videos' folder
-# #     videoDownloadPath = os.path.join(videoSavePath, new_filename)
+allImgData = []
+for video_url in video_urls:
+    # Extract file extensions
+    extension = video_url.split(".")[-1]
 
-# #     if extension == "mp4":
-# #         print("mp4 file")
-# #         response = requests.get(video_url, stream=True)
-# #         # Print the response status code
-# #         print("Response Status Code:", response.status_code)
+    # Define the new filename within the 'videos' folder
+    videoDownloadPath = os.path.join(videoSavePath, new_filename)
 
-# #         # Print the headers received in the response
-# #         print("Response Headers:", response.headers)
+    if extension == "mp4":
+        print("mp4 file")
+        response = requests.get(video_url, stream=True)
+        # Print the response status code
+        print("Response Status Code:", response.status_code)
 
-# #         if response.status_code == 200:
-# #             with open(videoDownloadPath, "wb") as file:
-# #                 for chunk in response.iter_content(chunk_size=128):
-# #                     file.write(chunk)
-# #             print("Video downloaded successfully.")
-# #         else:
-# #             print(f"Error: {response.status_code}")
-# #     else:
-# #         print("m3u8 file")
-# #         # Construct the ffmpeg command
-# #         ffmpeg_command = ["ffmpeg", "-i", video_url, "-c", "copy", videoDownloadPath]
+        # Print the headers received in the response
+        print("Response Headers:", response.headers)
 
-# #         # Run the command
-# #         try:
-# #             subprocess.run(ffmpeg_command, check=True)
-# #             print("Video downloaded successfully.")
-# #         except subprocess.CalledProcessError as e:
-# #             print(f"Error: {e}")
+        if response.status_code == 200:
+            with open(videoDownloadPath, "wb") as file:
+                for chunk in response.iter_content(chunk_size=128):
+                    file.write(chunk)
+            print("Video downloaded successfully.")
+        else:
+            print(f"Error: {response.status_code}")
+    else:
+        print("m3u8 file")
+        # Construct the ffmpeg command
+        ffmpeg_command = ["ffmpeg", "-i", video_url, "-c", "copy", videoDownloadPath]
 
-# #     frames_info = video_preprocessing(
-# #         video_url, imageDirectory, videoSavePath, fps, new_filename
-# #     )
-# #     allImgData.extend(frames_info)
-# # print(f"Frames extracted and saved in '{imageDirectory}' folder.")
+        # Run the command
+        try:
+            subprocess.run(ffmpeg_command, check=True)
+            print("Video downloaded successfully.")
+        except subprocess.CalledProcessError as e:
+            print(f"Error: {e}")
 
-# # create_csv_for_video_frames(imageDirectory, csvFramesFile)
-# # print(f"CSV file '{csvFramesFile}' created for storing video frames.")
+    frames_info = video_preprocessing(
+        video_url, imageDirectory, videoSavePath, fps, new_filename
+    )
+    allImgData.extend(frames_info)
+print(f"Frames extracted and saved in '{imageDirectory}' folder.")
+
+create_csv_for_video_frames(imageDirectory, csvFramesFile)
+print(f"CSV file '{csvFramesFile}' created for storing video frames.")
 
 
-# # data = pushImageDataToWeaviate(allImgData)
+data = pushImageDataToWeaviate(allImgData)
 
-# imagesToFind = [
-#     "Smoking scenes",
-#     "Nudity",
-#     "Drug scene",
-#     "Alcohol Drinking Scene",
-#     "Old Lady Drinking",
-# ]
+imagesToFind = [
+    "Smoking scenes",
+    "Nudity",
+    "Drug scene",
+    "Alcohol Drinking Scene",
+    "Old Lady Drinking",
+]
 
-# for question in imagesToFind:
-#     number = 5
+for question in imagesToFind:
+    number = 5
 
-#     try:
-#         response = searchImages(question, number)
-#         pprint.pprint(response)
-#         # st.write(response)
-#     except Exception as e:
-#         print(f"An error occurred: {e}")
+    try:
+        response = searchImages(question, number)
+        pprint.pprint(response)
+        # st.write(response)
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
-#     # for single data from weaviate based on certinaty only
-#     print("--------------------------------question--------------------------------")
-#     print(question)
-#     for single_Data in response["data"]["Get"][IMAGE_WEAVIATE_CLASS_NAME]:
-#         print(single_Data["imagePath"])
-#         # Append data to the dictionary
-#         imageData["Title"].append(new_filename)
-#         imageData["Question"].append(question)
-#         imageData["Weaviate Certainty Score"].append(
-#             single_Data["_additional"]["certainty"]
-#         )
-#         imageData["Images"].append(single_Data["imagePath"])
-#         imageData["Start Time"].append(single_Data["time"])
-#         imageData["Video URL"].append(single_Data["video_url"])
-#         # Create a DataFrame from the updated data dictionary
-#         image_df = pd.DataFrame(imageData)
+    # for single data from weaviate based on certinaty only
+    print("--------------------------------question--------------------------------")
+    print(question)
+    for single_Data in response["data"]["Get"][IMAGE_WEAVIATE_CLASS_NAME]:
+        print(single_Data["imagePath"])
+        # Append data to the dictionary
+        imageData["Title"].append(new_filename)
+        imageData["Question"].append(question)
+        imageData["Weaviate Certainty Score"].append(
+            single_Data["_additional"]["certainty"]
+        )
+        imageData["Images"].append(single_Data["imagePath"])
+        imageData["Start Time"].append(single_Data["time"])
+        imageData["Video URL"].append(single_Data["video_url"])
+        # Create a DataFrame from the updated data dictionary
+        image_df = pd.DataFrame(imageData)
 
-#     # Check if the file already exists
-# # file_exists2 = os.path.exists(f"output/{imageFileName}.csv")
-# Image_file_exists = os.path.exists(os.path.join("output", f"{imageFileName}.csv"))
+    # Check if the file already exists
+# file_exists2 = os.path.exists(f"output/{imageFileName}.csv")
+Image_file_exists = os.path.exists(os.path.join("output", f"{imageFileName}.csv"))
 
-# # Append the DataFrame to the CSV file without removing existing data
-# if not Image_file_exists:
-#     image_df.to_csv(
-#         # f"output/{imageFileName}.csv",
-#         os.path.join("output", f"{imageFileName}.csv"),
-#         mode="w",
-#         header=True,
-#         index=True,
-#         encoding="utf-8",
-#     )
-# else:
-#     image_df.to_csv(
-#         # f"output/{imageFileName}.csv",
-#         os.path.join("output", f"{imageFileName}.csv"),
-#         mode="a",
-#         header=False,
-#         index=True,
-#         encoding="utf-8",
-#     )
+# Append the DataFrame to the CSV file without removing existing data
+if not Image_file_exists:
+    image_df.to_csv(
+        # f"output/{imageFileName}.csv",
+        os.path.join("output", f"{imageFileName}.csv"),
+        mode="w",
+        header=True,
+        index=True,
+        encoding="utf-8",
+    )
+else:
+    image_df.to_csv(
+        # f"output/{imageFileName}.csv",
+        os.path.join("output", f"{imageFileName}.csv"),
+        mode="a",
+        header=False,
+        index=True,
+        encoding="utf-8",
+    )
 
-# print(f"Data written to {imageFileName}.csv file...")
+print(f"Data written to {imageFileName}.csv file...")

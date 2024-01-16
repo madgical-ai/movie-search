@@ -220,10 +220,11 @@ os.makedirs(videoSavePath, exist_ok=True)
 
 # Define the video URLs
 video_urls = [
+    video_data["file_url"]
     # "https://drive.google.com/file/d/1QSocDebTBM14B9uandQqd6PAXo5PrwcF/view",
     # "https://dw3htsev2ue75.cloudfront.net/file_library/videos/original/1702045139729_148580288932900580_video_VOD.mp4",
     # "https://dw3htsev2ue75.cloudfront.net/file_library/videos/vod_non_drm_ios/3914863/1703829714_8836106315530689/1703829532376_514402963971579000_video_VOD.m3u8",
-    "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3921737/1704792969_2818107061889017/1704791827614_658733090626124200_video_VOD720p30.mp4"
+    # "https://dw3htsev2ue75.cloudfront.net/file_library/videos/download/3921737/1704792969_2818107061889017/1704791827614_658733090626124200_video_VOD720p30.mp4"
 ]
 
 imageEndTime = None

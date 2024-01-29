@@ -36,10 +36,10 @@ def get_video_details(video_data):
 
     # Parse the JSON response
     result = response.json()
-    print("\n ---------------Video Details Response--------------------")
-    print(response)
-    pprint.pprint(result)
-    print("---------------Video Details Response--------------------\n")
+    # print("\n ---------------Video Details Response--------------------")
+    # print(response)
+    # pprint.pprint(result)
+    # print("---------------Video Details Response--------------------\n")
     return result
 
 

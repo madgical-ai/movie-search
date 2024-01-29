@@ -99,6 +99,13 @@ pip3 install -r requirements.txt
   python3 consolidatedSolutionWithDownload.py
   ```
 - For generate a sheet for time calculation, indicating the duration taken by the code from transcribing the file obtained from VideoCript to generating the results of an image search then you need to use the following command:
+
   ```
   python3 consolidatedSolutionWithDownloadandTime.py
   ```
+
+- For specific format required by the client then you need to use the following command:
+  ```
+  python3 clientFormat30Sec.py
+  ```
+  [Demo video](https://drive.google.com/file/d/1FD6JAhsdYtWoHiEXAZbWXEinpFzzj-qe/view?usp=sharing)

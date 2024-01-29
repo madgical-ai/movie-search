@@ -17,8 +17,8 @@ import re
 from pprint import pprint
 
 
-def get_transcription_data_based_on_minutes(video_data):
-    target_time_interval = 300
+def get_transcription_data_based_on_minutes(video_data, target_time_interval):
+    # target_time_interval = 300
     weaviateData = []
 
     videoDetails = get_video_details(video_data)
@@ -38,7 +38,7 @@ def get_transcription_data_based_on_minutes(video_data):
         for transcript in videoDetails["data"]["transcripts_data"]
     ]
     pprint("--------------------------------")
-    pprint(transcriptionData)
+    # pprint(transcriptionData)
 
     # Extracting download URLs
     download_urls = videoDetails["data"]["download_url"]
@@ -52,7 +52,7 @@ def get_transcription_data_based_on_minutes(video_data):
 
     # Download the file from the first URL in 'transcription_data'
     url = transcriptionData[0]
-    pprint(url)
+    # pprint(url)
 
     response = requests.get(url)
 
@@ -97,13 +97,13 @@ def get_transcription_data_based_on_minutes(video_data):
 
             # Convert start and end time to seconds including milliseconds
             start_time_components = start_time.split(":")
-            print(
-                "----------------------------------float------------------------------"
-            )
-            print(start_time_components)
-            print(type(start_time_components))
-            print(start_time)
-            print(type(start_time))
+            # print(
+            #     "----------------------------------float------------------------------"
+            # )
+            # print(start_time_components)
+            # print(type(start_time_components))
+            # print(start_time)
+            # print(type(start_time))
 
             start_time_seconds = (
                 int(start_time_components[0]) * 3600
@@ -173,7 +173,9 @@ def get_transcription_data_based_on_minutes(video_data):
                     "original_url": original_url,
                 }
             )
-
+    print(
+        "----------------------------Done Transcribe Data------------------------------------"
+    )
     return weaviateData
 
 

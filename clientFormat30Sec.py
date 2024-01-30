@@ -14,6 +14,18 @@ from src.getVideoTranscribeDataBasesOnMinutesSrtFormat import (
     get_transcription_data_based_on_minutes,
 )
 
+data = {
+    "Time In": [],
+    "Time Out": [],
+    "Tag Category": [],
+    "Tag Description": [],
+    "Status": [],
+}
+
+
+# csvFileName = "profinity-movie-search-client-format"
+csvFileName = "profinity-movie-search-result-combine"
+
 video_data = {
     "id": "3921737",
     "account_id": "10002831",
@@ -27,6 +39,7 @@ video_data = {
     "drm_status": "",
     "drm_encrypted": 0,
 }
+
 target_time_interval = 30
 videoTextArray = get_transcription_data_based_on_minutes(
     video_data, target_time_interval
@@ -35,16 +48,6 @@ videoTextArray = get_transcription_data_based_on_minutes(
 
 openai_model = "gpt-3.5-turbo"
 
-data = {
-    "Time In": [],
-    "Time Out": [],
-    "Tag Category": [],
-    "Tag Description": [],
-    "Status": [],
-}
-
-
-csvFileName = "profinity-movie-search-client-format"
 
 for dic in videoTextArray:
     print("--------------------------Open Ai--------------------------------------")
@@ -173,22 +176,82 @@ for question in imagesToFind:
 
     try:
         response = searchImages(question, number)
+        # print(response)
+        # Extract the 'MovieImagesData' list
+        movie_images_data = response["data"]["Get"]["MovieImagesData"]
+
+        # Create a dictionary to store continuous time intervals
+        continuous_time_intervals = {}
+
+        # Iterate through the data and combine continuous time intervals
+        current_start_time = None
+        current_end_time = None
+
+        totalTime = []
+        # Print the time for each entry
+        for image_data in movie_images_data:
+            time = image_data["time"]
+            # print(f"Time: {time} seconds")
+            totalTime.append(time)
+
+        # Sort the totalTime array in ascending order
+        sortedTotalTime = sorted(totalTime)
+
+        # Initialize a list to store combined time intervals
+        combinedTimeIntervals = []
+
+        # Print the sorted totalTime
+        # print("Sorted Total Time:", sortedTotalTime)
+        # Initialize variables to track the start and end of a continuous interval
+        start_time = sortedTotalTime[0]
+        end_time = sortedTotalTime[0]
+
+        # Iterate through the sorted time values
+        for time in sortedTotalTime[1:]:
+            # Check if the current time is consecutive to the previous end_time
+            if time == end_time + 1:
+                end_time = time  # Extend the continuous interval
+            else:
+                # Add the current continuous interval to the result
+                combinedTimeIntervals.append(
+                    {"start_time": start_time, "end_time": end_time}
+                )
+                # Start a new continuous interval
+                start_time = end_time = time
+
+        # Add the last continuous interval to the result
+        combinedTimeIntervals.append({"start_time": start_time, "end_time": end_time})
+
+        # Print the combined time intervals
+        for interval in combinedTimeIntervals:
+            # print(
+            #     f"Start Time: {interval['start_time']} seconds, End Time: {interval['end_time']} seconds"
+            # )
+
+            data["Time In"].append(seconds_to_time(interval["start_time"]))
+            data["Time Out"].append(seconds_to_time(interval["end_time"]))
+            data["Tag Category"].append(question)
+            data["Tag Description"].append(question)
+            data["Status"].append("-")
+
+        totalTime = []
+
         # pprint.pprint(response)
         # st.write(response)
     except Exception as e:
         print(f"An error occurred: {e}")
 
     # for single data from weaviate based on certinaty only
-    print("--------------------------------question--------------------------------")
-    print(question)
-    for single_Data in response["data"]["Get"][IMAGE_WEAVIATE_CLASS_NAME]:
-        # print(single_Data["imagePath"])
-        # Append data to the dictionary
-        data["Time In"].append(seconds_to_time(single_Data["time"]))
-        data["Time Out"].append(seconds_to_time(single_Data["time"]))
-        data["Tag Category"].append(question)
-        data["Tag Description"].append(question)
-        data["Status"].append("-")
+    # print("--------------------------------question--------------------------------")
+    # print(question)
+    # for single_Data in response["data"]["Get"][IMAGE_WEAVIATE_CLASS_NAME]:
+    #     # print(single_Data["imagePath"])
+    #     # Append data to the dictionary
+    #     data["Time In"].append(seconds_to_time(single_Data["time"]))
+    #     data["Time Out"].append(seconds_to_time(single_Data["time"]))
+    #     data["Tag Category"].append(question)
+    #     data["Tag Description"].append(question)
+    #     data["Status"].append("-")
 
 # Create a DataFrame from the updated data dictionary
 df = pd.DataFrame(data)
